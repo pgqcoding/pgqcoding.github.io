@@ -1,607 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>IDEA 使用技巧</title>
-      <link href="/2020/06/26/tool-idea.html"/>
-      <url>/2020/06/26/tool-idea.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文记录<span class="label info">IDEA</span>的使用技巧及相关配置</p><a id="more"></a><h2 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h2><p>a.光标快速切换</p><ul><li><span class="label info">HOME</span>键切换到行头</li><li><span class="label info">END</span>键切换到行尾</li><li><span class="label info">CTRL+HOME</span>键向前切换一个单词</li><li><span class="label info">CTRL+END</span>键向后切换一个单词b.切换TAB</li><li><span class="label info">ALT+↑</span>键向前切换</li><li><span class="label info">ALT+↓</span>键向后切换c.打开历史浏览文件</li><li><span class="label info">CTRL+E</span>键打开历史浏览文件记录</li></ul><h2 id="2-断点调试"><a href="#2-断点调试" class="headerlink" title="2.断点调试"></a>2.断点调试</h2><h3 id="2-1-基本断点"><a href="#2-1-基本断点" class="headerlink" title="2.1.基本断点"></a>2.1.基本断点</h3><ul><li><span class="label info">Step Over(F6)</span>执行到当前方法的下一句</li><li><span class="label info">Step Info(F5)</span>进入到当前行调用的方法体里面</li><li><span class="label info">Step Out(F7)</span>跳出当前执行的方法返回到执行方法的行</li><li><span class="label info">Force Step Into(ALT+SHIFT+F7)</span>进入到当前行调用的方法体里面，与step info不同的是后者只能进入到自己写的方法体里面，后者可以进入到jar的方法里或者JDK的方法里面</li><li><span class="label info">Run to Cursor(CTRL+R)</span>运行到光标所在处</li><li><span class="label info">Resume Program</span>结束当前断点，后续没有断点这则执行完，后续还有断点则直接到该断点<h3 id="2-2-条件断点"><a href="#2-2-条件断点" class="headerlink" title="2.2.条件断点"></a>2.2.条件断点</h3></li><li>在断点处鼠标右键，在condition中写上断点条件（正常的java语法）<h3 id="2-3-异常断点"><a href="#2-3-异常断点" class="headerlink" title="2.3.异常断点"></a>2.3.异常断点</h3></li><li>在断点管理器中添加Java Exception Breakpoint断点</li></ul><h2 id="3-常用插件"><a href="#3-常用插件" class="headerlink" title="3.常用插件"></a>3.常用插件</h2><h3 id="3-1-代码格式化"><a href="#3-1-代码格式化" class="headerlink" title="3.1.代码格式化"></a>3.1.代码格式化</h3><p>a.插件名：<span class="label info">eclipse code formatter</span><br>b.配置（见下图）<br><img src="/images/tool-idea-1.png" alt="配置"><br>c.其他说明：图中所示eclipse-style.xml文件需要提前<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FsaWJhYmEvcDNjL3RyZWUvbWFzdGVyL3AzYy1mb3JtYXR0ZXI=" title="https://github.com/alibaba/p3c/tree/master/p3c-formatter">下载<i class="fa fa-external-link"></i></span>。如果注释里面的<br>参数在格式化后不希望它换行显示，需要改一下配置。打开eclipse-code-style.xml文件，搜索insert_new_line_for_parameter(大概在434行)，<br>修改配置项总的value值为<span class="label info">do not insert</span></p><h3 id="3-2-注释"><a href="#3-2-注释" class="headerlink" title="3.2.注释"></a>3.2.注释</h3><p>a.插件名：<span class="label info">easyjavadoc</span><br>b.配置：默认配置即可<br>c.其他说明：快捷键-<span class="label info">ctrl+\</span></p><h3 id="3-3-提交保存"><a href="#3-3-提交保存" class="headerlink" title="3.3.提交保存"></a>3.3.提交保存</h3><p>a.插件名：<span class="label info">save action</span><br>b.配置（见下图）<br><img src="/images/tool-idea-2.png" alt="配置"><br>c.其他说明：保存代码自动格式化，自动给出序列化ID，其他配置根据需要勾选</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[IDEA 使用技巧]]></title>
+    <url>%2F2020%2F06%2F26%2Ftool-idea.html</url>
+    <content type="text"><![CDATA[前言本文记录IDEA的使用技巧及相关配置 1.快捷键a.光标快速切换 HOME键切换到行头 END键切换到行尾 CTRL+HOME键向前切换一个单词 CTRL+END键向后切换一个单词 b.切换TAB ALT+↑键向前切换 ALT+↓键向后切换 c.打开历史浏览文件 CTRL+E键打开历史浏览文件记录 2.断点调试2.1.基本断点 Step Over(F6)执行到当前方法的下一句 Step Info(F5)进入到当前行调用的方法体里面 Step Out(F7)跳出当前执行的方法返回到执行方法的行 Force Step Into(ALT+SHIFT+F7)进入到当前行调用的方法体里面，与step info不同的是后者只能进入到自己写的方法体里面，后者可以进入到jar的方法里或者JDK的方法里面 Run to Cursor(CTRL+R)运行到光标所在处 Resume Program结束当前断点，后续没有断点这则执行完，后续还有断点则直接到该断点 2.2.条件断点 在断点处鼠标右键，在condition中写上断点条件（正常的java语法）2.3.异常断点 在断点管理器中添加Java Exception Breakpoint断点 3.常用插件3.1.代码格式化a.插件名：eclipse code formatterb.配置（见下图）c.其他说明：图中所示eclipse-style.xml文件需要提前下载。如果注释里面的参数在格式化后不希望它换行显示，需要改一下配置。打开eclipse-code-style.xml文件，搜索insert_new_line_for_parameter(大概在434行)，修改配置项总的value值为do not insert 3.2.注释a.插件名：easyjavadocb.配置：默认配置即可c.其他说明：快捷键-ctrl+\ 3.3.提交保存a.插件名：save actionb.配置（见下图）c.其他说明：保存代码自动格式化，自动给出序列化ID，其他配置根据需要勾选]]></content>
       <categories>
-          
-          <category> 技巧 </category>
-          
-          <category> IDEA </category>
-          
+        <category>技巧</category>
+        <category>IDEA</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> IDE </tag>
-            
-            <tag> 技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux磁盘管理过程</title>
-      <link href="/2019/12/27/linux-disk-manager.html"/>
-      <url>/2019/12/27/linux-disk-manager.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文主要记录linux下磁盘管理过程.适用场景:vm实例创建时分配较少的存储空间,随着时间累积最初分配的存储空间不够用，需要扩容,提供以下方案：<br>1.LVM在线扩容,不需要重启机器,可以挂载在根目录</p><a id="more"></a><p>2.作为数据盘挂载在其他空目录,可能需要格式化,具体需要看是否是全新的磁盘</p><h2 id="1-磁盘管理命令"><a href="#1-磁盘管理命令" class="headerlink" title="1.磁盘管理命令"></a>1.磁盘管理命令</h2><h3 id="1-1-查看相关"><a href="#1-1-查看相关" class="headerlink" title="1.1.查看相关"></a>1.1.查看相关</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">du -sh &lt;目录&gt;  // 查看目录大小</span><br><span class="line">df -hT        // 查看已挂载磁盘信息</span><br><span class="line">fdisk -l      // 查看所有磁盘信息(包含未挂载磁盘)</span><br><span class="line">lsblk         // 查看磁盘分区结构</span><br><span class="line">vi /etc/fstab // 将挂载信息加入到开启自动挂载</span><br></pre></td></tr></table></figure><h3 id="1-2-创建分区"><a href="#1-2-创建分区" class="headerlink" title="1.2.创建分区"></a>1.2.创建分区</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">[root@web ~]# fdisk /dev/sdb</span><br><span class="line">Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel</span><br><span class="line">Building a new DOS disklabel with disk identifier 0xc5f4d586.</span><br><span class="line">Changes will remain in memory only, until you decide to write them.</span><br><span class="line">After that, of course, the previous content won't be recoverable.</span><br><span class="line"></span><br><span class="line">Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)</span><br><span class="line"></span><br><span class="line">WARNING: DOS-compatible mode is deprecated. It's strongly recommended to</span><br><span class="line">         switch off the mode (command 'c') and change display units to</span><br><span class="line">         sectors (command 'u').</span><br><span class="line"></span><br><span class="line">Command (m for help): n    ## 'n'代表新建一个分区</span><br><span class="line">Command action</span><br><span class="line">   e   extended</span><br><span class="line">   p   primary partition (1-4)</span><br><span class="line">p     ## 'e'代表扩展分区,'p'代表主分区(最多四个)</span><br><span class="line">Partition number (1-4): 1     ## 选择分区编号</span><br><span class="line">First cylinder (1-65270, default 1):     ## 选择开始位置,默认即可,直接回车</span><br><span class="line">Using default value 1</span><br><span class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-65270, default 65270): +150G     ## 分区大小,默认为剩余的全部,可自己输入</span><br><span class="line"></span><br><span class="line">Command (m for help): t     ## 't'代表更换分区类型</span><br><span class="line">Selected partition 1        ## 当前需要处理的分区编号,只有一个的话默认1</span><br><span class="line">Hex code (type L to list codes): 8e     ## 分区类型编号, 8e代表LVM类型, 83代表linux类型</span><br><span class="line">Changed system type of partition 1 to 8e (Linux LVM)</span><br><span class="line"></span><br><span class="line">Command (m for help): n     ## 新建一个分区,这个我是想分两个主分区,所以我没有保存继续新建分区</span><br><span class="line">Command action</span><br><span class="line">   e   extended</span><br><span class="line">   p   primary partition (1-4)</span><br><span class="line">p</span><br><span class="line">Partition number (1-4): 2   ## 新建分区编号2</span><br><span class="line">First cylinder (19583-65270, default 19583):      ## 默认开始位置</span><br><span class="line">Using default value 19583</span><br><span class="line">Last cylinder, +cylinders or +size&#123;K,M,G&#125; (19583-65270, default 65270):     ## 默认剩余的所有空间</span><br><span class="line">Using default value 65270</span><br><span class="line"></span><br><span class="line">Command (m for help): t     ## 修改分区类型</span><br><span class="line">Partition number (1-4): 2   ## 选择需要处理的分区编号</span><br><span class="line">Hex code (type L to list codes): 8e     ## 分区类型</span><br><span class="line">Changed system type of partition 2 to 8e (Linux LVM)</span><br><span class="line"></span><br><span class="line">Command (m for help): w     ## 分区完成,保存分区</span><br><span class="line">The partition table has been altered!</span><br><span class="line"></span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br></pre></td></tr></table></figure><h2 id="2-LVM在线扩容"><a href="#2-LVM在线扩容" class="headerlink" title="2.LVM在线扩容"></a>2.LVM在线扩容</h2><h3 id="2-1-磁盘分区"><a href="#2-1-磁盘分区" class="headerlink" title="2.1.磁盘分区"></a>2.1.磁盘分区</h3><p>执行步骤1.2</p><h3 id="2-2-创建物理卷"><a href="#2-2-创建物理卷" class="headerlink" title="2.2.创建物理卷"></a>2.2.创建物理卷</h3><p>通过命令<code>pvcreate &lt;分区&gt;</code>创建物理卷, 通过命令<code>pvdisplay</code>查看物理卷</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@local ~]# pvcreate /dev/sdb1</span><br><span class="line">Physical volume "/dev/sdb1" successfully created</span><br></pre></td></tr></table></figure><p>在这一步我们要拿到现有卷的VG_NAME的值,下一步要用到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VG Name               centos</span><br></pre></td></tr></table></figure><h3 id="2-3-加入卷组"><a href="#2-3-加入卷组" class="headerlink" title="2.3.加入卷组"></a>2.3.加入卷组</h3><p>a.通过命令<code>vgdisplay</code>查看卷组<br>b.通过命令<code>vgextend &lt;在上一步中获取到的VG_NAME&gt; &lt;分区&gt;</code>将物理卷加入卷组</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@web ~]# vgextend vg_centos6 /dev/sdb1</span><br><span class="line">Volume group "vg_centos6" successfully extended</span><br></pre></td></tr></table></figure><h3 id="2-4-扩容"><a href="#2-4-扩容" class="headerlink" title="2.4.扩容"></a>2.4.扩容</h3><p>通过<code>lvdisplay</code>查看lv_path<br>命令: <code>lvextend -l +100%FREE &lt;lv_path&gt;</code>, 如果有多个lv_path选择带root的</p><h3 id="2-5-执行调整"><a href="#2-5-执行调整" class="headerlink" title="2.5.执行调整"></a>2.5.执行调整</h3><p>这一步与磁盘文件系统有关,如果磁盘文件系统为”ext2、ext3、ext4”,则用命令<code>resize2fs &lt;lv_path&gt;</code>, 如果是xfs文件系统, 这用命令<code>xfs_growfs &lt;lv_path&gt;</code><br>这里我们使用resize2fs命令</p><h2 id="3-挂载数据盘"><a href="#3-挂载数据盘" class="headerlink" title="3.挂载数据盘"></a>3.挂载数据盘</h2><p>在上面1.2步骤中我们已经创建了sdb2这个分区,现在我们把它当做数据盘挂载到/data目录,注意，最好是挂载到空目录,如果不是空目录挂载好了之后回导致以前的文件不可见，需要特殊处理之后才可见</p><h3 id="3-1-格式化分区"><a href="#3-1-格式化分区" class="headerlink" title="3.1.格式化分区"></a>3.1.格式化分区</h3><p>因为这里的分区是我们新建的,所以挂载之前需要格式化.格式化类型选择etx4,<del>别问为什么,选择就好了</del><br>命令：<code>mkfs.ext4 /dev/sdb2</code></p><h3 id="3-2-挂载目录"><a href="#3-2-挂载目录" class="headerlink" title="3.2.挂载目录"></a>3.2.挂载目录</h3><p>命令：<code>mount &lt;分区&gt; &lt;挂载目录&gt;</code>,</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sdb2 /data</span><br></pre></td></tr></table></figure><h3 id="3-3-自动挂载"><a href="#3-3-自动挂载" class="headerlink" title="3.3.自动挂载"></a>3.3.自动挂载</h3><p>编辑/etc/fstab文件, 将分区挂载信息加入到文件中</p>]]></content>
-      
-      
+      <tags>
+        <tag>IDE</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux磁盘管理过程]]></title>
+    <url>%2F2019%2F12%2F27%2Flinux-disk-manager.html</url>
+    <content type="text"><![CDATA[前言本文主要记录linux下磁盘管理过程.适用场景:vm实例创建时分配较少的存储空间,随着时间累积最初分配的存储空间不够用，需要扩容,提供以下方案：1.LVM在线扩容,不需要重启机器,可以挂载在根目录 2.作为数据盘挂载在其他空目录,可能需要格式化,具体需要看是否是全新的磁盘 1.磁盘管理命令1.1.查看相关12345du -sh &lt;目录&gt; // 查看目录大小df -hT // 查看已挂载磁盘信息fdisk -l // 查看所有磁盘信息(包含未挂载磁盘)lsblk // 查看磁盘分区结构vi /etc/fstab // 将挂载信息加入到开启自动挂载 1.2.创建分区123456789101112131415161718192021222324252627282930313233343536373839404142434445464748[root@web ~]# fdisk /dev/sdbDevice contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabelBuilding a new DOS disklabel with disk identifier 0xc5f4d586.Changes will remain in memory only, until you decide to write them.After that, of course, the previous content won't be recoverable.Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)WARNING: DOS-compatible mode is deprecated. It's strongly recommended to switch off the mode (command 'c') and change display units to sectors (command 'u').Command (m for help): n ## 'n'代表新建一个分区Command action e extended p primary partition (1-4)p ## 'e'代表扩展分区,'p'代表主分区(最多四个)Partition number (1-4): 1 ## 选择分区编号First cylinder (1-65270, default 1): ## 选择开始位置,默认即可,直接回车Using default value 1Last cylinder, +cylinders or +size&#123;K,M,G&#125; (1-65270, default 65270): +150G ## 分区大小,默认为剩余的全部,可自己输入Command (m for help): t ## 't'代表更换分区类型Selected partition 1 ## 当前需要处理的分区编号,只有一个的话默认1Hex code (type L to list codes): 8e ## 分区类型编号, 8e代表LVM类型, 83代表linux类型Changed system type of partition 1 to 8e (Linux LVM)Command (m for help): n ## 新建一个分区,这个我是想分两个主分区,所以我没有保存继续新建分区Command action e extended p primary partition (1-4)pPartition number (1-4): 2 ## 新建分区编号2First cylinder (19583-65270, default 19583): ## 默认开始位置Using default value 19583Last cylinder, +cylinders or +size&#123;K,M,G&#125; (19583-65270, default 65270): ## 默认剩余的所有空间Using default value 65270Command (m for help): t ## 修改分区类型Partition number (1-4): 2 ## 选择需要处理的分区编号Hex code (type L to list codes): 8e ## 分区类型Changed system type of partition 2 to 8e (Linux LVM)Command (m for help): w ## 分区完成,保存分区The partition table has been altered!Calling ioctl() to re-read partition table.Syncing disks. 2.LVM在线扩容2.1.磁盘分区执行步骤1.2 2.2.创建物理卷通过命令pvcreate &lt;分区&gt;创建物理卷, 通过命令pvdisplay查看物理卷 12[root@local ~]# pvcreate /dev/sdb1Physical volume "/dev/sdb1" successfully created 在这一步我们要拿到现有卷的VG_NAME的值,下一步要用到 1VG Name centos 2.3.加入卷组a.通过命令vgdisplay查看卷组b.通过命令vgextend &lt;在上一步中获取到的VG_NAME&gt; &lt;分区&gt;将物理卷加入卷组 12[root@web ~]# vgextend vg_centos6 /dev/sdb1Volume group "vg_centos6" successfully extended 2.4.扩容通过lvdisplay查看lv_path命令: lvextend -l +100%FREE &lt;lv_path&gt;, 如果有多个lv_path选择带root的 2.5.执行调整这一步与磁盘文件系统有关,如果磁盘文件系统为”ext2、ext3、ext4”,则用命令resize2fs &lt;lv_path&gt;, 如果是xfs文件系统, 这用命令xfs_growfs &lt;lv_path&gt;这里我们使用resize2fs命令 3.挂载数据盘在上面1.2步骤中我们已经创建了sdb2这个分区,现在我们把它当做数据盘挂载到/data目录,注意，最好是挂载到空目录,如果不是空目录挂载好了之后回导致以前的文件不可见，需要特殊处理之后才可见 3.1.格式化分区因为这里的分区是我们新建的,所以挂载之前需要格式化.格式化类型选择etx4,别问为什么,选择就好了命令：mkfs.ext4 /dev/sdb2 3.2.挂载目录命令：mount &lt;分区&gt; &lt;挂载目录&gt;, 1mount /dev/sdb2 /data 3.3.自动挂载编辑/etc/fstab文件, 将分区挂载信息加入到文件中]]></content>
       <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> 命令 </category>
-          
+        <category>笔记</category>
+        <category>命令</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> 磁盘管理 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>windows下mysql免安装版本配置</title>
-      <link href="/2019/12/20/mysql-install-win.html"/>
-      <url>/2019/12/20/mysql-install-win.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">mysql.5.7.28</span>在windows下的安装步骤</p><a id="more"></a><h2 id="1-版本说明及下载"><a href="#1-版本说明及下载" class="headerlink" title="1.版本说明及下载"></a>1.版本说明及下载</h2><p>mysql官网<span class="exturl" data-url="aHR0cHM6Ly9jZG4ubXlzcWwuY29tLy9Eb3dubG9hZHMvTXlTUUwtNS43L215c3FsLTUuNy4yOC13aW54NjQuemlw" title="https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.28-winx64.zip">下载<i class="fa fa-external-link"></i></span>指定版本的zip包<br><img src="/images/mysql-install-windows-01.jpg" alt="版本选择"></p><h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><h3 id="2-1-解压缩"><a href="#2-1-解压缩" class="headerlink" title="2.1.解压缩"></a>2.1.解压缩</h3><p>将下载的ZIP包解压缩到安装目录，这里以<span class="label info">D:\software\</span>目录为例.</p><h3 id="2-2-配置文件"><a href="#2-2-配置文件" class="headerlink" title="2.2.配置文件"></a>2.2.配置文件</h3><p>如果压缩包里面没有my.ini配置文件,我们需要自己创建一个这里要注意编码,建议用notepad++编辑<br>在my.ini文件里面写入以下内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># For advice on how to change settings please see</span><br><span class="line"># http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html</span><br><span class="line"># *** DO NOT EDIT THIS FILE. It&apos;s a template which will be copied to the</span><br><span class="line"># *** default location during install, and will be replaced if you</span><br><span class="line"># *** upgrade to a newer version of MySQL.</span><br><span class="line"></span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line"># Remove leading # and set to the amount of RAM for the most important data</span><br><span class="line"># cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.</span><br><span class="line"># innodb_buffer_pool_size = 128M</span><br><span class="line"></span><br><span class="line"># Remove leading # to turn on a very important data integrity option: logging</span><br><span class="line"># changes to the binary log between backups.</span><br><span class="line"># log_bin</span><br><span class="line"></span><br><span class="line"># These are commonly set, remove the # and set as required.</span><br><span class="line">basedir=D:/software/mysql</span><br><span class="line">datadir=D:/software/mysql/data</span><br><span class="line">character_set_server=utf8</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line">port=3306</span><br><span class="line"># server_id = .....</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Remove leading # to set options mainly useful for reporting servers.</span><br><span class="line"># The server defaults are faster for transactions and fast SELECTs.</span><br><span class="line"># Adjust sizes as needed, experiment to find the optimal values.</span><br><span class="line"># join_buffer_size=128M</span><br><span class="line"># sort_buffer_size=2M</span><br><span class="line"># read_rnd_buffer_size=2M </span><br><span class="line"></span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</span><br></pre></td></tr></table></figure><h3 id="2-3-环境变量"><a href="#2-3-环境变量" class="headerlink" title="2.3.环境变量"></a>2.3.环境变量</h3><p>将mysql目录加入环境变量(非必要,建议加)<br>编辑环境变量中的PATH,并在值后面拼上mysql的bin目录的全路径</p><h3 id="2-4-数据库初始化"><a href="#2-4-数据库初始化" class="headerlink" title="2.4.数据库初始化"></a>2.4.数据库初始化</h3><p>a.安装mysql:<code>mysqld --install</code><br>b.初始化:<code>mysqld --initialize --user=root --console</code>,这一步会打印日志,我们需要提取日志中<mark>root@localhost</mark>部分后面的一串字符串，这个字符串为数据库初始密码，后面会用到<br>c.启动mysql:<code>net start mysql</code><br>d.登录mysql:<code>mysql -uroot -p</code><br>e.登录上mysql后,其他命令都执行不了,会提示我们需要修改密码.这里我们使用<code>set password for root@localhost = password(&#39;root&#39;);</code>命令修改密码,并使用命令<code>flush privileges</code>刷新权限<br>f.重启mysql:<code>net stop mysql</code>,<code>net start mysql</code>.</p>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>笔记</tag>
+        <tag>磁盘管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows下mysql免安装版本配置]]></title>
+    <url>%2F2019%2F12%2F20%2Fmysql-install-win.html</url>
+    <content type="text"><![CDATA[前言本博客记录mysql.5.7.28在windows下的安装步骤 1.版本说明及下载mysql官网下载指定版本的zip包 2.配置2.1.解压缩将下载的ZIP包解压缩到安装目录，这里以D:\software\目录为例. 2.2.配置文件如果压缩包里面没有my.ini配置文件,我们需要自己创建一个这里要注意编码,建议用notepad++编辑在my.ini文件里面写入以下内容 123456789101112131415161718192021222324252627282930313233343536# For advice on how to change settings please see# http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html# *** DO NOT EDIT THIS FILE. It&apos;s a template which will be copied to the# *** default location during install, and will be replaced if you# *** upgrade to a newer version of MySQL.[client]default-character-set=utf8[mysqld]# Remove leading # and set to the amount of RAM for the most important data# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.# innodb_buffer_pool_size = 128M# Remove leading # to turn on a very important data integrity option: logging# changes to the binary log between backups.# log_bin# These are commonly set, remove the # and set as required.basedir=D:/software/mysqldatadir=D:/software/mysql/datacharacter_set_server=utf8default-storage-engine=INNODBport=3306# server_id = .....# Remove leading # to set options mainly useful for reporting servers.# The server defaults are faster for transactions and fast SELECTs.# Adjust sizes as needed, experiment to find the optimal values.# join_buffer_size=128M# sort_buffer_size=2M# read_rnd_buffer_size=2M sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES 2.3.环境变量将mysql目录加入环境变量(非必要,建议加)编辑环境变量中的PATH,并在值后面拼上mysql的bin目录的全路径 2.4.数据库初始化a.安装mysql:mysqld --installb.初始化:mysqld --initialize --user=root --console,这一步会打印日志,我们需要提取日志中root@localhost部分后面的一串字符串，这个字符串为数据库初始密码，后面会用到c.启动mysql:net start mysqld.登录mysql:mysql -uroot -pe.登录上mysql后,其他命令都执行不了,会提示我们需要修改密码.这里我们使用set password for root@localhost = password(&#39;root&#39;);命令修改密码,并使用命令flush privileges刷新权限f.重启mysql:net stop mysql,net start mysql.]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> mysql </category>
-          
-          <category> 安装 </category>
-          
+        <category>教程</category>
+        <category>mysql</category>
+        <category>安装</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> mysql </tag>
-            
-            <tag> windows </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>javamail超时排查过程记录</title>
-      <link href="/2019/12/16/java-mail-question.html"/>
-      <url>/2019/12/16/java-mail-question.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用springboot+javamail的时候,偶尔会碰到邮件发送超时问题,特别是部署到生产环境的时候,会发现跟本地环境在时间上有较大出入,这里记录一下问题排查过程</p><a id="more"></a><hr><h2 id="1-日志排查"><a href="#1-日志排查" class="headerlink" title="1.日志排查"></a>1.日志排查</h2><p>通过排查日志发现邮件发送过程耗时较长,且发送邮件的线程会中途无故被回收,考虑到线程阻塞问题,我们加了如下配置：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 连接超时时间</span><br><span class="line">spring.mail.properties.mail.smtp.connectiontimeout=30000</span><br><span class="line"># 邮件发送超时时间</span><br><span class="line">spring.mail.properties.mail.smtp.timeout=20000</span><br><span class="line"># 邮件收取超时时间</span><br><span class="line">spring.mail.properties.mail.smtp.writetimeout=20000</span><br></pre></td></tr></table></figure><h2 id="2-命令发送邮件"><a href="#2-命令发送邮件" class="headerlink" title="2.命令发送邮件"></a>2.命令发送邮件</h2><p>通过telnet命令直接发送邮件,在这之前保证telnet命令所在服务器与邮件服务器网络是通的</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">EHLO localhost</span><br><span class="line">AUTH LOGIN</span><br><span class="line">ddddddd <span class="comment"># 账号的base64</span></span><br><span class="line">dddddd  <span class="comment"># 密码的base64</span></span><br><span class="line">MAIL FROM: &lt;panggq@aliyun.com&gt;</span><br><span class="line">RCPT TO: &lt;ethan-pang@qq.com&gt;</span><br><span class="line">DATA</span><br><span class="line">From: panggq@aliyun.com</span><br><span class="line">To: ethan-pang@qq.com</span><br><span class="line">Subject:test111</span><br><span class="line">.</span><br></pre></td></tr></table></figure><h2 id="3-抓包分析"><a href="#3-抓包分析" class="headerlink" title="3.抓包分析"></a>3.抓包分析</h2><p>加上配置之后发现并没有改善超时问题,且用telnet命令发送邮件正常,无果我们只能抓包分析请求<br>抓包命令: <span class="label default">注意点</span><span class="label primary">tcpdump -i any -w /tmp/file.cap host 192.168.1.122 and tcp port 465</span><br>通过分析请求包发现客户端在获取hostname时耗时非常长, 另外获取邮件地址耗时也非常长,至此，发现两个耗时长的地方，下面我们一一解决.</p><h2 id="4-解决问题"><a href="#4-解决问题" class="headerlink" title="4.解决问题"></a>4.解决问题</h2><div class="note default">            <p>问题一：获取hostname耗时长的问题</p>          </div><p>通过分析javamail的源码我们知道javamail在获取客户端主机的hostname,可能由于主机的安全策略问题导致这里超时.故找到解决问题的方法,增加配置.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 配置hostname</span><br><span class="line">spring.mail.properties.mail.smtp.localhost=localhost</span><br></pre></td></tr></table></figure><div class="note default">            <p>问题二：获取邮件收发人信息耗时长的问题</p>          </div><p>待解决…^_^</p>]]></content>
-      
-      
+      <tags>
+        <tag>mysql</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[javamail超时排查过程记录]]></title>
+    <url>%2F2019%2F12%2F16%2Fjava-mail-question.html</url>
+    <content type="text"><![CDATA[前言使用springboot+javamail的时候,偶尔会碰到邮件发送超时问题,特别是部署到生产环境的时候,会发现跟本地环境在时间上有较大出入,这里记录一下问题排查过程 1.日志排查通过排查日志发现邮件发送过程耗时较长,且发送邮件的线程会中途无故被回收,考虑到线程阻塞问题,我们加了如下配置： 123456# 连接超时时间spring.mail.properties.mail.smtp.connectiontimeout=30000# 邮件发送超时时间spring.mail.properties.mail.smtp.timeout=20000# 邮件收取超时时间spring.mail.properties.mail.smtp.writetimeout=20000 2.命令发送邮件通过telnet命令直接发送邮件,在这之前保证telnet命令所在服务器与邮件服务器网络是通的 1234567891011EHLO localhostAUTH LOGINddddddd # 账号的base64dddddd # 密码的base64MAIL FROM: &lt;panggq@aliyun.com&gt;RCPT TO: &lt;ethan-pang@qq.com&gt;DATAFrom: panggq@aliyun.comTo: ethan-pang@qq.comSubject:test111. 3.抓包分析加上配置之后发现并没有改善超时问题,且用telnet命令发送邮件正常,无果我们只能抓包分析请求抓包命令: 注意点tcpdump -i any -w /tmp/file.cap host 192.168.1.122 and tcp port 465通过分析请求包发现客户端在获取hostname时耗时非常长, 另外获取邮件地址耗时也非常长,至此，发现两个耗时长的地方，下面我们一一解决. 4.解决问题 问题一：获取hostname耗时长的问题 通过分析javamail的源码我们知道javamail在获取客户端主机的hostname,可能由于主机的安全策略问题导致这里超时.故找到解决问题的方法,增加配置. 12# 配置hostnamespring.mail.properties.mail.smtp.localhost=localhost 问题二：获取邮件收发人信息耗时长的问题 待解决…^_^]]></content>
       <categories>
-          
-          <category> 问题排查 </category>
-          
-          <category> javamail </category>
-          
+        <category>问题排查</category>
+        <category>javamail</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> JAVA </tag>
-            
-            <tag> MAIL </tag>
-            
-            <tag> 问题排查 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux环境下安装配置Nginx</title>
-      <link href="/2019/11/05/linux-nginx-install.html"/>
-      <url>/2019/11/05/linux-nginx-install.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里记录nginx在linux(centos7.x)环境下的安装步骤</p><a id="more"></a><hr><h2 id="1-安装前准备"><a href="#1-安装前准备" class="headerlink" title="1.安装前准备"></a>1.安装前准备</h2><p>由于我们采用的是源码安装的方式，所以需要在开始之前安装一些必要的依赖，可以直接采用以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++ autoconf automake libtool make cmake</span><br><span class="line">yum -y install zlib zlib-devel openssl openssl-devel pcre-devel</span><br></pre></td></tr></table></figure><h2 id="2-下载安装"><a href="#2-下载安装" class="headerlink" title="2.下载安装"></a>2.下载安装</h2><p>a.可以到<span class="exturl" data-url="aHR0cDovL25naW54Lm9yZy9lbi9kb3dubG9hZC5odG1s" title="http://nginx.org/en/download.html">官网下载<i class="fa fa-external-link"></i></span>源码包，然后通过FTP的方式上传到服务器。<br>b.解压：<code>tar -zvxf &lt;nginx-tar-path&gt; -C /usr/local/</code><br>c.进入解压后的路径：<code>cd /usr/local/nginx-1.16.1</code><br>d.配置：<code>./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-pcre</code>.这里安装ssl模块，其他模块类似<br>e.make<br>f.make install</p><h2 id="3-命令"><a href="#3-命令" class="headerlink" title="3.命令"></a>3.命令</h2><p>检查配置：<code>/usr/local/nginx/sbin/nginx -t</code><br>启动：<code>/usr/local/nginx/sbin/nginx</code><br>重启：<code>/usr/local/nginx/sbin/nginx -s reload</code><br>关闭：<code>/usr/local/nginx/sbin/nginx -s stop</code></p>]]></content>
-      
-      
+      <tags>
+        <tag>JAVA</tag>
+        <tag>MAIL</tag>
+        <tag>问题排查</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux环境下安装配置Nginx]]></title>
+    <url>%2F2019%2F11%2F05%2Flinux-nginx-install.html</url>
+    <content type="text"><![CDATA[前言这里记录nginx在linux(centos7.x)环境下的安装步骤 1.安装前准备由于我们采用的是源码安装的方式，所以需要在开始之前安装一些必要的依赖，可以直接采用以下命令 12yum -y install gcc gcc-c++ autoconf automake libtool make cmakeyum -y install zlib zlib-devel openssl openssl-devel pcre-devel 2.下载安装a.可以到官网下载源码包，然后通过FTP的方式上传到服务器。b.解压：tar -zvxf &lt;nginx-tar-path&gt; -C /usr/local/c.进入解压后的路径：cd /usr/local/nginx-1.16.1d.配置：./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-pcre.这里安装ssl模块，其他模块类似e.makef.make install 3.命令检查配置：/usr/local/nginx/sbin/nginx -t启动：/usr/local/nginx/sbin/nginx重启：/usr/local/nginx/sbin/nginx -s reload关闭：/usr/local/nginx/sbin/nginx -s stop]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> nginx </category>
-          
-          <category> 安装 </category>
-          
+        <category>教程</category>
+        <category>nginx</category>
+        <category>安装</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> nginx </tag>
-            
-            <tag> 安装 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>maven相关知识</title>
-      <link href="/2019/11/05/maven-command.html"/>
-      <url>/2019/11/05/maven-command.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里记录Maven日常使用过程的技巧及知识点</p><a id="more"></a><h2 id="1-命令"><a href="#1-命令" class="headerlink" title="1.命令"></a>1.命令</h2><h3 id="1-1-Maven卡住"><a href="#1-1-Maven卡住" class="headerlink" title="1.1.Maven卡住"></a>1.1.Maven卡住</h3><p><code>for /r %i in (*.lastUpdated) do del %i</code></p><h3 id="1-2-本地安装依赖"><a href="#1-2-本地安装依赖" class="headerlink" title="1.2.本地安装依赖"></a>1.2.本地安装依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install:install-file -DgroupId=org.artofsolving.jodconverter -DartifactId=jodconverter-core -Dversion=3.0-beta-4 -Dpackaging=jar -Dfile=C:\Users\lenovo\Desktop\jodconverter-core-3.0-beta-4.jar</span><br></pre></td></tr></table></figure><div class="note default">            <p>1.DgroupId指定依赖的groupId、DartifactId指定依赖的artifactId、Dpackaging指定依赖包的路径、Dversion指定依赖版本<br>2.执行完成后可以到对应路径下查看依赖是否成功，成功则可以在POM文件中按照正常的依赖引入的方式引入<br>3.POM引入报错update一下</p>          </div>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>nginx</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[maven相关知识]]></title>
+    <url>%2F2019%2F11%2F05%2Fmaven-command.html</url>
+    <content type="text"><![CDATA[前言这里记录Maven日常使用过程的技巧及知识点 1.命令1.1.Maven卡住for /r %i in (*.lastUpdated) do del %i 1.2.本地安装依赖1mvn install:install-file -DgroupId=org.artofsolving.jodconverter -DartifactId=jodconverter-core -Dversion=3.0-beta-4 -Dpackaging=jar -Dfile=C:\Users\lenovo\Desktop\jodconverter-core-3.0-beta-4.jar 1.DgroupId指定依赖的groupId、DartifactId指定依赖的artifactId、Dpackaging指定依赖包的路径、Dversion指定依赖版本2.执行完成后可以到对应路径下查看依赖是否成功，成功则可以在POM文件中按照正常的依赖引入的方式引入3.POM引入报错update一下]]></content>
       <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> 命令 </category>
-          
+        <category>笔记</category>
+        <category>命令</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 命令 </tag>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> maven </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>nginx使用心得及相关配置</title>
-      <link href="/2019/09/11/nginx-conf.html"/>
-      <url>/2019/09/11/nginx-conf.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">nginx</span>的使用场景及技巧心得体会，并附上相关配置</p><a id="more"></a><h2 id="1-灰度发布方案"><a href="#1-灰度发布方案" class="headerlink" title="1.灰度发布方案"></a>1.灰度发布方案</h2><p>可以采用nginx+cookie的方案实现灰度发布</p><p>过程中配置项发现老是报未知指令，在确认版本无误的情况下，可以尝试在报错的行中每个关键字前后加上空格试试</p>]]></content>
-      
-      
+      <tags>
+        <tag>命令</tag>
+        <tag>笔记</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nginx使用心得及相关配置]]></title>
+    <url>%2F2019%2F09%2F11%2Fnginx-conf.html</url>
+    <content type="text"><![CDATA[前言本博客记录nginx的使用场景及技巧心得体会，并附上相关配置 1.灰度发布方案可以采用nginx+cookie的方案实现灰度发布 过程中配置项发现老是报未知指令，在确认版本无误的情况下，可以尝试在报错的行中每个关键字前后加上空格试试]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> nginx </category>
-          
-          <category> 配置 </category>
-          
+        <category>教程</category>
+        <category>nginx</category>
+        <category>配置</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> nginx </tag>
-            
-            <tag> conf </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>阿里云数据库Redis版性能测试报告</title>
-      <link href="/2019/09/03/aliyun-redis-performance-test-report.html"/>
-      <url>/2019/09/03/aliyun-redis-performance-test-report.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文以阿里云数据库Redis版为例，参照阿里性能测试白皮书<span class="exturl" data-url="aHR0cHM6Ly9oZWxwLmFsaXl1bi5jb20vZG9jdW1lbnRfZGV0YWlsLzEwMDQ1Mi5odG1sP3NwbT1hMmM0Zy4xMTE4NjYyMy42LjY3Ni4zZjk5NTcyZTJ6V29DMQ==" title="https://help.aliyun.com/document_detail/100452.html?spm=a2c4g.11186623.6.676.3f99572e2zWoC1">redis性能测试<i class="fa fa-external-link"></i></span>，记录测试步骤及过程理解。其他平台类似产品可以此为例进行性能测试。</p><a id="more"></a><h2 id="1-测试命令及指标"><a href="#1-测试命令及指标" class="headerlink" title="1.测试命令及指标"></a>1.测试命令及指标</h2><h3 id="1-1-测试命令"><a href="#1-1-测试命令" class="headerlink" title="1.1.测试命令"></a>1.1.测试命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./memtier_benchmark -s r-***************.redis.rds.aliyuncs.com -p 6379 -a &lt;password&gt; -c 20 -d 32 --threads=10 --ratio=1:1 --test-time=1800 --select-db=10</span><br></pre></td></tr></table></figure><h3 id="1-2-测试指标"><a href="#1-2-测试指标" class="headerlink" title="1.2.测试指标"></a>1.2.测试指标</h3><span class="label success">QPS</span>，Queries Per Second，即数据库每秒处理的请求数。]]></content>
-      
-      
+      <tags>
+        <tag>nginx</tag>
+        <tag>conf</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[阿里云数据库Redis版性能测试报告]]></title>
+    <url>%2F2019%2F09%2F03%2Faliyun-redis-performance-test-report.html</url>
+    <content type="text"><![CDATA[前言本文以阿里云数据库Redis版为例，参照阿里性能测试白皮书redis性能测试，记录测试步骤及过程理解。其他平台类似产品可以此为例进行性能测试。 1.测试命令及指标1.1.测试命令1./memtier_benchmark -s r-***************.redis.rds.aliyuncs.com -p 6379 -a &lt;password&gt; -c 20 -d 32 --threads=10 --ratio=1:1 --test-time=1800 --select-db=10 1.2.测试指标QPS，Queries Per Second，即数据库每秒处理的请求数。]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> redis </category>
-          
-          <category> 测试报告 </category>
-          
+        <category>教程</category>
+        <category>redis</category>
+        <category>测试报告</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 阿里 </tag>
-            
-            <tag> 云数据库 </tag>
-            
-            <tag> redis </tag>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>安卓模拟器genymotion的SDK下载</title>
-      <link href="/2019/08/26/genymotion-sdk-download.html"/>
-      <url>/2019/08/26/genymotion-sdk-download.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">genymotion</span>快速下载SDK的方法</p><a id="more"></a><h2 id="1-找到下载链接"><a href="#1-找到下载链接" class="headerlink" title="1.找到下载链接"></a>1.找到下载链接</h2><p>这一步是关键步骤，我们可以通过查看genymotion的运行日志看到下载链接。将链接提取出来放到浏览器地址栏直接回车即可下载，或者复制到迅雷这种下载器当中。</p><p>a.运行genymotion软件，正常找到你需要下载的虚拟机器，点击安装（下载）。ok，可以放着不管了<br>b.打开<span class="label info">C:\Users\Administrator\AppData\Local\Genymobilegenymotion.log</span>文件，搜索日志。一般来讲搜索<span class="label info">http://</span>关键词即可，找到最下面的匹配路径即为下载链接。<br>c.将链接复制到浏览器地址栏，回车，可以看到ova正在下载，且速度较快</p><h2 id="2-复制文件"><a href="#2-复制文件" class="headerlink" title="2.复制文件"></a>2.复制文件</h2><p>将下载好的ova文件复制到<span class="label info">C:\Users\Administrator\AppData\Local\Genymobile\Genymotion\ova</span>目录下</p><h2 id="3-加载虚拟机器"><a href="#3-加载虚拟机器" class="headerlink" title="3.加载虚拟机器"></a>3.加载虚拟机器</h2><p>打开virtualBox管理器，可以看到你需要的虚拟机器。如果看不到可以手动导入ova文件。接下来关闭genymotion再打开就有虚拟机器可以用了</p>]]></content>
-      
-      
+      <tags>
+        <tag>阿里</tag>
+        <tag>云数据库</tag>
+        <tag>redis</tag>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安卓模拟器genymotion的SDK下载]]></title>
+    <url>%2F2019%2F08%2F26%2Fgenymotion-sdk-download.html</url>
+    <content type="text"><![CDATA[前言本博客记录genymotion快速下载SDK的方法 1.找到下载链接这一步是关键步骤，我们可以通过查看genymotion的运行日志看到下载链接。将链接提取出来放到浏览器地址栏直接回车即可下载，或者复制到迅雷这种下载器当中。 a.运行genymotion软件，正常找到你需要下载的虚拟机器，点击安装（下载）。ok，可以放着不管了b.打开C:\Users\Administrator\AppData\Local\Genymobilegenymotion.log文件，搜索日志。一般来讲搜索http://关键词即可，找到最下面的匹配路径即为下载链接。c.将链接复制到浏览器地址栏，回车，可以看到ova正在下载，且速度较快 2.复制文件将下载好的ova文件复制到C:\Users\Administrator\AppData\Local\Genymobile\Genymotion\ova目录下 3.加载虚拟机器打开virtualBox管理器，可以看到你需要的虚拟机器。如果看不到可以手动导入ova文件。接下来关闭genymotion再打开就有虚拟机器可以用了]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> 安卓 </category>
-          
-          <category> 模拟器下载 </category>
-          
+        <category>教程</category>
+        <category>安卓</category>
+        <category>模拟器下载</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 安卓 </tag>
-            
-            <tag> 模拟器 </tag>
-            
-            <tag> genymotion </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>spring-boot知识点集锦</title>
-      <link href="/2019/08/19/spring-boot-project-knowledge.html"/>
-      <url>/2019/08/19/spring-boot-project-knowledge.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里记录springboot框架的各种知识点</p><a id="more"></a><h2 id="1-配置文件知识点"><a href="#1-配置文件知识点" class="headerlink" title="1.配置文件知识点"></a>1.配置文件知识点</h2><p>配置session超时时间，注意这里的springboot版本，下面的配置仅支持<span class="label warning">2.X</span>版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.servlet.session.timeout=7200s</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>安卓</tag>
+        <tag>模拟器</tag>
+        <tag>genymotion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-boot知识点集锦]]></title>
+    <url>%2F2019%2F08%2F19%2Fspring-boot-project-knowledge.html</url>
+    <content type="text"><![CDATA[前言这里记录springboot框架的各种知识点 1.配置文件知识点配置session超时时间，注意这里的springboot版本，下面的配置仅支持2.X版本 1server.servlet.session.timeout=7200s]]></content>
       <categories>
-          
-          <category> 框架 </category>
-          
-          <category> springboot </category>
-          
-          <category> 知识点 </category>
-          
+        <category>框架</category>
+        <category>springboot</category>
+        <category>知识点</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> springboot </tag>
-            
-            <tag> 知识点 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>spring-boot项目错误集锦</title>
-      <link href="/2019/08/14/spring-boot-project-error.html"/>
-      <url>/2019/08/14/spring-boot-project-error.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里记录springboot项目开发过程中的各种错误</p><a id="more"></a><h2 id="1-pom文件报错"><a href="#1-pom文件报错" class="headerlink" title="1.pom文件报错"></a>1.pom文件报错</h2><p>pom文件第一行报错：<span class="label warning">unknow error</span>(见下图)，只需要在POM文件中增加如下代码</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 增加下面这一行 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maven-jar-plugin.version</span>&gt;</span>3.1.1<span class="tag">&lt;/<span class="name">maven-jar-plugin.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="2-启动报错"><a href="#2-启动报错" class="headerlink" title="2.启动报错"></a>2.启动报错</h2><h3 id="2-1-循环依赖问题"><a href="#2-1-循环依赖问题" class="headerlink" title="2.1.循环依赖问题"></a>2.1.循环依赖问题</h3><p>错误提示：<span class="label warning">There is a circular dependency between 7 beans in the application context</span>(见下图)。</p><p><img src="/images/sping-boot-project-error-01.png" alt="错误"></p><p>原因描述：可能是代码中出现serviceA中注入了serviceB，然后serviceB中又注入了serviceA，这就会导致BEAN加载是不知道先加载那个，出现循环依赖问题</p><p>解决方案一：(最快速)<br>给循环注入的所有Bean加上<mark>@Lazy</mark>注解</p><p>解决方案二：（推荐）<br>通过业务解耦的思路，拆分调用方法实现解耦，也就是不让这种循环依赖的问题出现</p><h2 id="3-打包报错"><a href="#3-打包报错" class="headerlink" title="3.打包报错"></a>3.打包报错</h2><h3 id="3-1-跳过测试"><a href="#3-1-跳过测试" class="headerlink" title="3.1.跳过测试"></a>3.1.跳过测试</h3><p>通常情况下我们的开发环境是不能连上生产库的，所以我们打包的时候如果不跳过测试可能会出现错误。我们可以在POM文件中增加下面的代码以跳过测试步骤</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 增加下面这一行 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>springboot</tag>
+        <tag>知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-boot项目错误集锦]]></title>
+    <url>%2F2019%2F08%2F14%2Fspring-boot-project-error.html</url>
+    <content type="text"><![CDATA[前言这里记录springboot项目开发过程中的各种错误 1.pom文件报错pom文件第一行报错：unknow error(见下图)，只需要在POM文件中增加如下代码 12345&lt;properties&gt; &lt;java.version&gt;1.8&lt;/java.version&gt; &lt;!-- 增加下面这一行 --&gt; &lt;maven-jar-plugin.version&gt;3.1.1&lt;/maven-jar-plugin.version&gt;&lt;/properties&gt; 2.启动报错2.1.循环依赖问题错误提示：There is a circular dependency between 7 beans in the application context(见下图)。 原因描述：可能是代码中出现serviceA中注入了serviceB，然后serviceB中又注入了serviceA，这就会导致BEAN加载是不知道先加载那个，出现循环依赖问题 解决方案一：(最快速)给循环注入的所有Bean加上@Lazy注解 解决方案二：（推荐）通过业务解耦的思路，拆分调用方法实现解耦，也就是不让这种循环依赖的问题出现 3.打包报错3.1.跳过测试通常情况下我们的开发环境是不能连上生产库的，所以我们打包的时候如果不跳过测试可能会出现错误。我们可以在POM文件中增加下面的代码以跳过测试步骤 12345&lt;properties&gt; &lt;java.version&gt;1.8&lt;/java.version&gt; &lt;!-- 增加下面这一行 --&gt; &lt;skipTests&gt;true&lt;/skipTests&gt;&lt;/properties&gt;]]></content>
       <categories>
-          
-          <category> 框架 </category>
-          
-          <category> springboot </category>
-          
-          <category> 错误 </category>
-          
+        <category>框架</category>
+        <category>springboot</category>
+        <category>错误</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> springboot </tag>
-            
-            <tag> error </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>知识储备</title>
-      <link href="/2019/08/12/Q-A-highlights.html"/>
-      <url>/2019/08/12/Q-A-highlights.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里记录各种问题及其解答，以此作为知识储备库</p><a id="more"></a><h2 id="1-语言篇"><a href="#1-语言篇" class="headerlink" title="1.语言篇"></a>1.语言篇</h2><h3 id="1-1-JAVA篇"><a href="#1-1-JAVA篇" class="headerlink" title="1.1.JAVA篇"></a>1.1.JAVA篇</h3><h3 id="1-2-VUE篇"><a href="#1-2-VUE篇" class="headerlink" title="1.2.VUE篇"></a>1.2.VUE篇</h3><h2 id="2-框架篇"><a href="#2-框架篇" class="headerlink" title="2.框架篇"></a>2.框架篇</h2><h3 id="2-1-springcloud篇"><a href="#2-1-springcloud篇" class="headerlink" title="2.1.springcloud篇"></a>2.1.springcloud篇</h3><ul><li>1.springcloud用来做什么的，怎么用</li></ul><h3 id="2-2-springboot篇"><a href="#2-2-springboot篇" class="headerlink" title="2.2.springboot篇"></a>2.2.springboot篇</h3><h3 id="2-3-spring篇"><a href="#2-3-spring篇" class="headerlink" title="2.3.spring篇"></a>2.3.spring篇</h3><h3 id="2-4-mybatis篇"><a href="#2-4-mybatis篇" class="headerlink" title="2.4.mybatis篇"></a>2.4.mybatis篇</h3><h3 id="2-5-springMVC篇"><a href="#2-5-springMVC篇" class="headerlink" title="2.5.springMVC篇"></a>2.5.springMVC篇</h3><h2 id="3-中间件篇"><a href="#3-中间件篇" class="headerlink" title="3.中间件篇"></a>3.中间件篇</h2><h3 id="3-1-REDIS篇"><a href="#3-1-REDIS篇" class="headerlink" title="3.1.REDIS篇"></a>3.1.REDIS篇</h3><ul><li>1.redis中有哪几种数据结构，常用那些数据结构，用在什么地方</li><li>2.redis中的每种数据结构分别有那些特点</li><li>3.redis数组的这种结果底层实现原理是什么</li></ul><h3 id="3-2-NGINX篇"><a href="#3-2-NGINX篇" class="headerlink" title="3.2.NGINX篇"></a>3.2.NGINX篇</h3><ul><li>1.nginx常被用来做什么事情，扮演什么角色</li></ul><h3 id="3-3-ZK篇"><a href="#3-3-ZK篇" class="headerlink" title="3.3.ZK篇"></a>3.3.ZK篇</h3><ul><li>1.ZK是用来干什么的</li></ul><h3 id="3-4-DUBBO篇"><a href="#3-4-DUBBO篇" class="headerlink" title="3.4.DUBBO篇"></a>3.4.DUBBO篇</h3><ul><li>1.dubbo是用来干什么的</li></ul><h3 id="3-5-KAFKA篇"><a href="#3-5-KAFKA篇" class="headerlink" title="3.5.KAFKA篇"></a>3.5.KAFKA篇</h3><ul><li>1.kafka是用来干什么的</li></ul><h2 id="4-数据库篇"><a href="#4-数据库篇" class="headerlink" title="4.数据库篇"></a>4.数据库篇</h2><h3 id="4-1-MYSQL篇"><a href="#4-1-MYSQL篇" class="headerlink" title="4.1.MYSQL篇"></a>4.1.MYSQL篇</h3><h3 id="4-2-ORACLE篇"><a href="#4-2-ORACLE篇" class="headerlink" title="4.2.ORACLE篇"></a>4.2.ORACLE篇</h3><h2 id="5-算法篇"><a href="#5-算法篇" class="headerlink" title="5.算法篇"></a>5.算法篇</h2><h3 id="5-1-冒泡排序"><a href="#5-1-冒泡排序" class="headerlink" title="5.1.冒泡排序"></a>5.1.冒泡排序</h3><h3 id="5-2-折半查找"><a href="#5-2-折半查找" class="headerlink" title="5.2.折半查找"></a>5.2.折半查找</h3><h3 id="5-3-图的遍历"><a href="#5-3-图的遍历" class="headerlink" title="5.3.图的遍历"></a>5.3.图的遍历</h3><h2 id="6-网络篇"><a href="#6-网络篇" class="headerlink" title="6.网络篇"></a>6.网络篇</h2><h3 id="6-1-TCP-IP协议"><a href="#6-1-TCP-IP协议" class="headerlink" title="6.1.TCP/IP协议"></a>6.1.TCP/IP协议</h3>]]></content>
-      
-      
+      <tags>
+        <tag>springboot</tag>
+        <tag>error</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[知识储备]]></title>
+    <url>%2F2019%2F08%2F12%2FQ-A-highlights.html</url>
+    <content type="text"><![CDATA[前言这里记录各种问题及其解答，以此作为知识储备库 1.语言篇1.1.JAVA篇1.2.VUE篇2.框架篇2.1.springcloud篇 1.springcloud用来做什么的，怎么用 2.2.springboot篇2.3.spring篇2.4.mybatis篇2.5.springMVC篇3.中间件篇3.1.REDIS篇 1.redis中有哪几种数据结构，常用那些数据结构，用在什么地方 2.redis中的每种数据结构分别有那些特点 3.redis数组的这种结果底层实现原理是什么 3.2.NGINX篇 1.nginx常被用来做什么事情，扮演什么角色 3.3.ZK篇 1.ZK是用来干什么的 3.4.DUBBO篇 1.dubbo是用来干什么的 3.5.KAFKA篇 1.kafka是用来干什么的 4.数据库篇4.1.MYSQL篇4.2.ORACLE篇5.算法篇5.1.冒泡排序5.2.折半查找5.3.图的遍历6.网络篇6.1.TCP/IP协议]]></content>
       <categories>
-          
-          <category> 集锦 </category>
-          
-          <category> 知识储备 </category>
-          
+        <category>集锦</category>
+        <category>知识储备</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 开发知识 </tag>
-            
-            <tag> 集锦 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux下安全基线配置</title>
-      <link href="/2019/08/07/linux-security-conf.html"/>
-      <url>/2019/08/07/linux-security-conf.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文记录linux Centos7.6下安全基线下的配置，每个人理解的安全基线不一定一样，这里以博主理解的进行配置，实际操作过程中可根据情况进行删减配置操作。</p><a id="more"></a><h2 id="1-系统用户及权限"><a href="#1-系统用户及权限" class="headerlink" title="1.系统用户及权限"></a>1.系统用户及权限</h2><h3 id="1-1-删除不需要的账号"><a href="#1-1-删除不需要的账号" class="headerlink" title="1.1.删除不需要的账号"></a>1.1.删除不需要的账号</h3><p>a.使用命令<code>cat /etc/passwd</code>检查是否存在以下用户:lp、sync、shutdown、halt、news、uucp、operator、games、gopher<br>b.使用命令<code>userdel [name]</code>删除不需要的用户，其中[name]为用户名。</p><div class="note info">            <p>如果删除games用户时提示不能删除games用户，可以通过删除用户组的方式删除<code>groupdel games</code></p>          </div><p>c.使用命令<code>usermod -s/dev/null [name]</code>修改默认账户的shell为/dev/null，建议修改的账号为uucp、ftp、news</p><h3 id="1-2-用户密码加密机制"><a href="#1-2-用户密码加密机制" class="headerlink" title="1.2.用户密码加密机制"></a>1.2.用户密码加密机制</h3><p>应确保系统中的所有用户的密码都被shadow机制加密。检查<code>awk -F: &#39;{if($2 !=&quot;x&quot; &amp;&amp; $2 != &quot;*&quot;) print $1}&#39;/etc/passwd</code>的输出，如果输出个别用户可能是/etc/passwd文件被人而已修改，建议删除此账号重建</p><h3 id="1-3-账号密码策略设置"><a href="#1-3-账号密码策略设置" class="headerlink" title="1.3.账号密码策略设置"></a>1.3.账号密码策略设置</h3><p>a.查看相关参数<code>cat /etc/login.defs</code><br>b.修改配置文件<code>vim /etc/login.defs</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 登录密码有效期</span></span><br><span class="line">PASS_MAX_DAYS180</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录密码最短修改时间间隔，可以防止非法用户短期内多次修改密码</span></span><br><span class="line">PASS_MIN_DAYS   0</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录密码最小长度</span></span><br><span class="line">PASS_MIN_LEN    8</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录密码过期前N天提醒</span></span><br><span class="line">PASS_WARN_AGE    7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录错误等待时间N秒</span></span><br><span class="line">FAIL_DELAY    10</span><br><span class="line"><span class="meta">#</span><span class="bash"> 登录错误记录到日志</span></span><br><span class="line">FAILLOG_ENAB    yes</span><br></pre></td></tr></table></figure><h3 id="1-4-账号锁定策略"><a href="#1-4-账号锁定策略" class="headerlink" title="1.4.账号锁定策略"></a>1.4.账号锁定策略</h3><p>当用户连续认证失败超过6次后，锁定该用户。查看配置<code>grep retry /etc/pam.d/system-auth</code>，查看retry是否已经设置</p><h3 id="1-5-禁止ctrl-alt-del键盘关闭命令"><a href="#1-5-禁止ctrl-alt-del键盘关闭命令" class="headerlink" title="1.5.禁止ctrl+alt+del键盘关闭命令"></a>1.5.禁止ctrl+alt+del键盘关闭命令</h3><p>在/etc/inittab文件中编辑注释掉<code>ca::ctrlaltdel:/sbin/shutdown-t3 -r now</code>行，直接在前面加上#号就行。为使改动生效，输入命令<code>/sbin/init q</code></p><h3 id="1-6-超时自动注销"><a href="#1-6-超时自动注销" class="headerlink" title="1.6.超时自动注销"></a>1.6.超时自动注销</h3><p>编辑profile文件<code>vi /etc/profile</code>，在<span class="label warning">HISTSIZE=</span>后面加入<span class="label success">TMOUT=600</span></p><h3 id="1-7-修改history保存命令数"><a href="#1-7-修改history保存命令数" class="headerlink" title="1.7.修改history保存命令数"></a>1.7.修改history保存命令数</h3><p>保证bashshell保存少量的命令，减少安全隐患。编辑<code>vi /etc/profile</code>，查看HISTSIZE的值，如果已经设置，修改值为30或30以下，如果没有设置则在空白行输入该配置</p><h3 id="1-8-检查UID为0的用户"><a href="#1-8-检查UID为0的用户" class="headerlink" title="1.8.检查UID为0的用户"></a>1.8.检查UID为0的用户</h3><p>保证UID为0的用户只有root一个。执行命令：<code>awk -F:&#39;{if($3==0) print $1}&#39; /etc/passwd&#39;</code>，如果输出除了root之外还有其他用户的话，这编辑/etc/passwd文件，找到对应的用户，修改UID的值</p><div class="note info">            <p>拥有UID=0的用户即拥有了系统最高权限</p>          </div><p>###1.9.shell变量检查</p><p>执行命令<code>usermod -s /bin/bash root</code>，检查输出。一般正常应该是/bin/bash或者/bin/sh，不应该出现/sbin/nologin或者/dev/null</p><h3 id="1-10-环境变量检查"><a href="#1-10-环境变量检查" class="headerlink" title="1.10.环境变量检查"></a>1.10.环境变量检查</h3><p>root path环境变量中不包含当前目录，防止root执行恶意代码。编辑/etc/profile，找到设置PATH的行，找到其中设置了当前目录符号<mark>.</mark>的行，并将这个<mark>.</mark>删除</p><h3 id="1-11-远程连接配置"><a href="#1-11-远程连接配置" class="headerlink" title="1.11.远程连接配置"></a>1.11.远程连接配置</h3><p>检查是否存在<span class="label info">.netrc</span><span class="label info">.rhosts</span>这两个文件，如果存在着删除这两个文件。查找命令：<code>find / -name .netrc</code>，<code>find / -name .rhosts</code></p><h2 id="2-文件权限篇"><a href="#2-文件权限篇" class="headerlink" title="2.文件权限篇"></a>2.文件权限篇</h2><h3 id="2-1-用户umask安全配置"><a href="#2-1-用户umask安全配置" class="headerlink" title="2.1.用户umask安全配置"></a>2.1.用户umask安全配置</h3><p>严格限制root初始文件的创建权限。对于root，应该设置umask为077。编辑/etc/profile，在文件最后加入umask=077</p><h3 id="2-2-文件权限设置"><a href="#2-2-文件权限设置" class="headerlink" title="2.2.文件权限设置"></a>2.2.文件权限设置</h3><p>检查目录和文件的权限设置</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/etc/passwd 644</span><br><span class="line">/etc/shadow 640</span><br><span class="line">/etc/rc3.d 744</span><br><span class="line">/etc/profile 744</span><br><span class="line">/etc/inet/conf 744</span><br><span class="line">/etc/xinet.conf 744</span><br></pre></td></tr></table></figure><p>如果不是上述权限，这通过命令<code>chmid 644 /etc/passwd</code>修改文件权限。通过命令<code>chattr +i /etc/passwd</code>防止文件被修改</p><h3 id="2-3目录权限检查"><a href="#2-3目录权限检查" class="headerlink" title="2.3目录权限检查"></a>2.3目录权限检查</h3><p>一般是不允许任何人都有写权限的目录存在的。通过以下命令检查是否存在这样的目录。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for A in `awk '($3 == "ext2" || $3 == "ext3") \</span><br><span class="line">&#123; print $2 &#125;' /etc/fstab`; do</span><br><span class="line">find $A -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -print</span><br><span class="line">Done</span><br></pre></td></tr></table></figure><h3 id="2-4-隐藏文件检查"><a href="#2-4-隐藏文件检查" class="headerlink" title="2.4.隐藏文件检查"></a>2.4.隐藏文件检查</h3><p>通过命令<code>ls -a</code>或者<code>find / -type f &#39;.?*&#39;</code>检查主机系统中是否存在可以隐藏文件，如果存在建议删除。</p><h2 id="3-系统内核配置"><a href="#3-系统内核配置" class="headerlink" title="3.系统内核配置"></a>3.系统内核配置</h2><h3 id="3-1-别名设置"><a href="#3-1-别名设置" class="headerlink" title="3.1.别名设置"></a>3.1.别名设置</h3><p>对root为ls、rm设置别名。执行命令<code>echo $SHELL</code>，如果输出</p><blockquote><p>csh: #vi ~/.cshrc<br>bash: #vi ~/.bashrc<br>编辑打开的文件，在空白行加入：</p></blockquote><div class="note info">            <p>alias ls=’ls -aol’<br>alias rm=’rm -i’</p>          </div><h3 id="3-2-关闭系统core-dump状态"><a href="#3-2-关闭系统core-dump状态" class="headerlink" title="3.2.关闭系统core dump状态"></a>3.2.关闭系统core dump状态</h3><p>系统core dump状态中可能包含系统信息，容易被入侵者利用，建议关闭。在/etc/profile中添加ulimit -c0</p><h3 id="3-3-su命令设置"><a href="#3-3-su命令设置" class="headerlink" title="3.3.su命令设置"></a>3.3.su命令设置</h3><p>应该避免任何人可以su为root，减少安全隐患。<br>编辑su文件(vi /etc/pam.d/su)，在开头添加下面的代码</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auth sufficient/lib/security/pam_rootok.so</span><br><span class="line">auth required/lib/security/pam_wheel.sogroup=wheel</span><br></pre></td></tr></table></figure><p>这里表明只有wheel组的成员可以使用su命令成为root用户。可以通过吧用户增加到wheel组的方式让他可以使用su命令，增加方法：<code>chmod - G10</code></p><h3 id="3-4-系统提示信息修改"><a href="#3-4-系统提示信息修改" class="headerlink" title="3.4.系统提示信息修改"></a>3.4.系统提示信息修改</h3><p>执行命令<code>vi /etc/rc.d/rc.local</code>，在文件<mark>末尾</mark>加入以下代码</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; /etc/issue</span><br><span class="line">echo &gt; /etc/issue.net</span><br><span class="line"><span class="meta">#</span><span class="bash">rm -f /etc/issue.net /etc/issue</span></span><br></pre></td></tr></table></figure><h2 id="4-系统服务及访问安全"><a href="#4-系统服务及访问安全" class="headerlink" title="4.系统服务及访问安全"></a>4.系统服务及访问安全</h2><h3 id="4-1-系统最小安装原则"><a href="#4-1-系统最小安装原则" class="headerlink" title="4.1.系统最小安装原则"></a>4.1.系统最小安装原则</h3><p>主机系统应禁用非必要服务。通过命令<code>chkconfig --list | grep on ̘ awk &#39;{print $1}&#39;</code>检查开启的服务中是否存在非必要服务，存在建议禁用</p><h3 id="4-2-ftp账号检查"><a href="#4-2-ftp账号检查" class="headerlink" title="4.2.ftp账号检查"></a>4.2.ftp账号检查</h3><p>查看cat /etc/ftpusers或者cat /etc/ftpd/ftpusers是否存在以下ftp账户。root/daemon/bin/sys/adm/lp/uucp/nuucp/listen/nobody/noaccess/nobody4</p><h3 id="4-3-主机信任关系检查"><a href="#4-3-主机信任关系检查" class="headerlink" title="4.3.主机信任关系检查"></a>4.3.主机信任关系检查</h3><p>查看/etc/hosts.equiv文件是否存在或者文件内容是否为空</p>]]></content>
-      
-      
+      <tags>
+        <tag>开发知识</tag>
+        <tag>集锦</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux下安全基线配置]]></title>
+    <url>%2F2019%2F08%2F07%2Flinux-security-conf.html</url>
+    <content type="text"><![CDATA[前言本文记录linux Centos7.6下安全基线下的配置，每个人理解的安全基线不一定一样，这里以博主理解的进行配置，实际操作过程中可根据情况进行删减配置操作。 1.系统用户及权限1.1.删除不需要的账号a.使用命令cat /etc/passwd检查是否存在以下用户:lp、sync、shutdown、halt、news、uucp、operator、games、gopherb.使用命令userdel [name]删除不需要的用户，其中[name]为用户名。 如果删除games用户时提示不能删除games用户，可以通过删除用户组的方式删除groupdel games c.使用命令usermod -s/dev/null [name]修改默认账户的shell为/dev/null，建议修改的账号为uucp、ftp、news 1.2.用户密码加密机制应确保系统中的所有用户的密码都被shadow机制加密。检查awk -F: &#39;{if($2 !=&quot;x&quot; &amp;&amp; $2 != &quot;*&quot;) print $1}&#39;/etc/passwd的输出，如果输出个别用户可能是/etc/passwd文件被人而已修改，建议删除此账号重建 1.3.账号密码策略设置a.查看相关参数cat /etc/login.defsb.修改配置文件vim /etc/login.defs 123456789101112# 登录密码有效期PASS_MAX_DAYS 180# 登录密码最短修改时间间隔，可以防止非法用户短期内多次修改密码PASS_MIN_DAYS 0# 登录密码最小长度PASS_MIN_LEN 8# 登录密码过期前N天提醒PASS_WARN_AGE 7# 登录错误等待时间N秒FAIL_DELAY 10# 登录错误记录到日志FAILLOG_ENAB yes 1.4.账号锁定策略当用户连续认证失败超过6次后，锁定该用户。查看配置grep retry /etc/pam.d/system-auth，查看retry是否已经设置 1.5.禁止ctrl+alt+del键盘关闭命令在/etc/inittab文件中编辑注释掉ca::ctrlaltdel:/sbin/shutdown-t3 -r now行，直接在前面加上#号就行。为使改动生效，输入命令/sbin/init q 1.6.超时自动注销编辑profile文件vi /etc/profile，在HISTSIZE=后面加入TMOUT=600 1.7.修改history保存命令数保证bashshell保存少量的命令，减少安全隐患。编辑vi /etc/profile，查看HISTSIZE的值，如果已经设置，修改值为30或30以下，如果没有设置则在空白行输入该配置 1.8.检查UID为0的用户保证UID为0的用户只有root一个。执行命令：awk -F:&#39;{if($3==0) print $1}&#39; /etc/passwd&#39;，如果输出除了root之外还有其他用户的话，这编辑/etc/passwd文件，找到对应的用户，修改UID的值 拥有UID=0的用户即拥有了系统最高权限 ###1.9.shell变量检查 执行命令usermod -s /bin/bash root，检查输出。一般正常应该是/bin/bash或者/bin/sh，不应该出现/sbin/nologin或者/dev/null 1.10.环境变量检查root path环境变量中不包含当前目录，防止root执行恶意代码。编辑/etc/profile，找到设置PATH的行，找到其中设置了当前目录符号.的行，并将这个.删除 1.11.远程连接配置检查是否存在.netrc.rhosts这两个文件，如果存在着删除这两个文件。查找命令：find / -name .netrc，find / -name .rhosts 2.文件权限篇2.1.用户umask安全配置严格限制root初始文件的创建权限。对于root，应该设置umask为077。编辑/etc/profile，在文件最后加入umask=077 2.2.文件权限设置检查目录和文件的权限设置 123456/etc/passwd 644/etc/shadow 640/etc/rc3.d 744/etc/profile 744/etc/inet/conf 744/etc/xinet.conf 744 如果不是上述权限，这通过命令chmid 644 /etc/passwd修改文件权限。通过命令chattr +i /etc/passwd防止文件被修改 2.3目录权限检查一般是不允许任何人都有写权限的目录存在的。通过以下命令检查是否存在这样的目录。 1234for A in `awk '($3 == "ext2" || $3 == "ext3") \&#123; print $2 &#125;' /etc/fstab`; dofind $A -xdev -type d \( -perm -0002 -a ! -perm -1000 \) -printDone 2.4.隐藏文件检查通过命令ls -a或者find / -type f &#39;.?*&#39;检查主机系统中是否存在可以隐藏文件，如果存在建议删除。 3.系统内核配置3.1.别名设置对root为ls、rm设置别名。执行命令echo $SHELL，如果输出 csh: #vi ~/.cshrcbash: #vi ~/.bashrc编辑打开的文件，在空白行加入： alias ls=’ls -aol’alias rm=’rm -i’ 3.2.关闭系统core dump状态系统core dump状态中可能包含系统信息，容易被入侵者利用，建议关闭。在/etc/profile中添加ulimit -c0 3.3.su命令设置应该避免任何人可以su为root，减少安全隐患。编辑su文件(vi /etc/pam.d/su)，在开头添加下面的代码 12auth sufficient/lib/security/pam_rootok.soauth required/lib/security/pam_wheel.sogroup=wheel 这里表明只有wheel组的成员可以使用su命令成为root用户。可以通过吧用户增加到wheel组的方式让他可以使用su命令，增加方法：chmod - G10 3.4.系统提示信息修改执行命令vi /etc/rc.d/rc.local，在文件末尾加入以下代码 123echo &gt; /etc/issueecho &gt; /etc/issue.net#rm -f /etc/issue.net /etc/issue 4.系统服务及访问安全4.1.系统最小安装原则主机系统应禁用非必要服务。通过命令chkconfig --list | grep on ̘ awk &#39;{print $1}&#39;检查开启的服务中是否存在非必要服务，存在建议禁用 4.2.ftp账号检查查看cat /etc/ftpusers或者cat /etc/ftpd/ftpusers是否存在以下ftp账户。root/daemon/bin/sys/adm/lp/uucp/nuucp/listen/nobody/noaccess/nobody4 4.3.主机信任关系检查查看/etc/hosts.equiv文件是否存在或者文件内容是否为空]]></content>
       <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> linux安全配置 </category>
-          
+        <category>笔记</category>
+        <category>linux安全配置</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> 安全 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux下安装mysql(tar源码安装方式)</title>
-      <link href="/2019/08/06/mysql-linux-tar-install.html"/>
-      <url>/2019/08/06/mysql-linux-tar-install.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">mysql.5.7.27</span>在linux(<span class="label info">CentOS7.6</span>)下的安装步骤</p><a id="more"></a><h2 id="1-版本说明及安装包下载"><a href="#1-版本说明及安装包下载" class="headerlink" title="1.版本说明及安装包下载"></a>1.版本说明及安装包下载</h2><p>mysql: v5.7.26。这里介绍的是tar源码方式安装，所有需要下载.tar.gz包。点击<span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9teXNxbC81LjcuaHRtbCNkb3dubG9hZHM=" title="https://dev.mysql.com/downloads/mysql/5.7.html#downloads">下载<i class="fa fa-external-link"></i></span>跳转到下载页面<br>linux: CentOS 7.6 64位</p><p><img src="/images/mysql-linux-tar-install-01.png" alt="版本选择"></p><h2 id="2-上传安装包"><a href="#2-上传安装包" class="headerlink" title="2.上传安装包"></a>2.上传安装包</h2><p>将下载好的安装包上传到服务器的<span class="label info">/usr/local/</span>目录下，并通过命令<code>tar -zxvf mysql-5.7.27-linux-glibc2.12-i686.tar.gz</code>解压缩到本目录，将解压后的文件通过mv命令重命名为mysql</p><h2 id="3-创建用户组并赋权"><a href="#3-创建用户组并赋权" class="headerlink" title="3.创建用户组并赋权"></a>3.创建用户组并赋权</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br><span class="line">useradd -r -g mysql mysql</span><br><span class="line">chown -R mysql mysql/</span><br><span class="line">chgrp -R mysql mysql/</span><br></pre></td></tr></table></figure><h2 id="4-编辑配置文件"><a href="#4-编辑配置文件" class="headerlink" title="4.编辑配置文件"></a>4.编辑配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br><span class="line"></span><br><span class="line"># 复制粘贴一下内容，部分路径需要修改为自己的路径</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">basedir=/usr/local/mysql</span><br><span class="line">datadir=/usr/local/mysql/data</span><br><span class="line">port=3306</span><br><span class="line"># server_id = .....</span><br><span class="line">socket=/tmp/mysql.sock</span><br><span class="line">character-set-server=utf8</span><br><span class="line">log-error=/usr/local/mysql/log/error.log</span><br><span class="line">pid-file=/usr/local/mysql/mysqld/mysql.pid</span><br><span class="line"></span><br><span class="line"># Remove leading # to set options mainly useful for reporting servers.</span><br><span class="line"># The server defaults are faster for transactions and fast SELECTs.</span><br><span class="line"># Adjust sizes as needed, experiment to find the optimal values.</span><br><span class="line">symbolic-links=0</span><br><span class="line">lower_case_table_names=1</span><br><span class="line">explicit_defaults_for_timestamp=true</span><br><span class="line"># join_buffer_size = 128M</span><br><span class="line"># sort_buffer_size = 2M</span><br><span class="line"># read_rnd_buffer_size = 2M</span><br><span class="line"></span><br><span class="line">innodb_buffer_pool_size=2G</span><br><span class="line">innodb_log_file_size=256M</span><br><span class="line">max_connections=300</span><br><span class="line">innodb_flush_log_at_trx_commit=2</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line">character-set-server=utf8</span><br><span class="line">collation-server=utf8_general_ci</span><br><span class="line"></span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br><span class="line"></span><br><span class="line">default-time_zone=&apos;+8:00&apos;</span><br><span class="line">sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span><br></pre></td></tr></table></figure><h2 id="5-初始化数据库"><a href="#5-初始化数据库" class="headerlink" title="5.初始化数据库"></a>5.初始化数据库</h2><p>a.通过命令安装libaio，命令：<code>yum install libaio</code><br>b.创建日志文件，注意这里的日志文件对应配置中的<span class="label info">log-error</span>属性的值<br>c.进入上面创建的日志文件所在目录授权，命令:<code>chmod 777 error.log</code>，<code>chown mysql:mysql error.log</code><br>d.初始化数据库，注意检查命令中的路径情况。命令：<code>/usr/local/mysql/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --lc_messages_dir=/usr/local/mysql/share --lc_messages=en_US</code></p><h2 id="6-获取初始密码"><a href="#6-获取初始密码" class="headerlink" title="6.获取初始密码"></a>6.获取初始密码</h2><p>经过上述步骤初始化数据库后，可以通过命令<code>cat /usr/local/mysql/log/error.log</code>查看密码。日志文件中找到root@localhost:<mark>这里放的就是初始密码</mark></p><h2 id="7-启动服务修改密码"><a href="#7-启动服务修改密码" class="headerlink" title="7.启动服务修改密码"></a>7.启动服务修改密码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入mysql根目录</span></span><br><span class="line">cd /usr/local/mysql/</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建文件夹</span></span><br><span class="line">mkdir mysqld</span><br><span class="line"><span class="meta">#</span><span class="bash"> 授权</span></span><br><span class="line">chmod 644 mysqld</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建pid文件</span></span><br><span class="line">cd mysqld</span><br><span class="line">vim mysql.pid # 不需要写入任何内容直接保存退出</span><br><span class="line"><span class="meta">#</span><span class="bash"> 授权</span></span><br><span class="line">chmod 644 mysql.pid</span><br><span class="line">chown mysql:mysql mysql.pid</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动mysql服务</span></span><br><span class="line">/usr/local/mysql/support-files/mysql.server start</span><br><span class="line"><span class="meta">#</span><span class="bash"> 通过上面提到的密码进入mysql</span></span><br><span class="line">/usr/local/mysql/bin/mysql -uroot -p 上面提到的密码</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入mysql后，首先要重置密码(必要)</span></span><br><span class="line">set password=password('新密码');</span><br><span class="line">UPDATE `mysql`.`user` SET `Host` = '%',  `User` = 'root'  WHERE (`Host` = 'localhost') AND (`User` = 'root');</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure><p>到这一步就可以检查是否可以远程连接了</p><h2 id="8-开机自启-centos-7-X"><a href="#8-开机自启-centos-7-X" class="headerlink" title="8.开机自启(centos 7.X)"></a>8.开机自启(centos 7.X)</h2><p>a.创建启动文件<code>touch /usr/lib/systemd/system/mysql.service</code><br>b.编辑配置文件：<code>vim /usr/lib/systemd/system/mysql.service</code><br>将下面的配置信息复制粘贴到文件中，注意修改<span class="label info">ExecStart</span>的属性值，改成自己的路径。其他的不用修改</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=MySQL Server</span><br><span class="line">Documentation=man:mysqld(8)</span><br><span class="line">Documentation=http://dev.mysql.com/doc/refman/en/using-systemd.html</span><br><span class="line">After=network.target</span><br><span class="line">After=syslog.target</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=mysql</span><br><span class="line">Group=mysql</span><br><span class="line">ExecStart=/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf</span><br><span class="line">LimitNOFILE = 5000</span><br><span class="line"><span class="meta">#</span><span class="bash">Restart=on-failure</span></span><br><span class="line"><span class="meta">#</span><span class="bash">RestartPreventExitStatus=1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">PrivateTmp=<span class="literal">false</span></span></span><br></pre></td></tr></table></figure><p>c.通过systemctl启动mysql<code>systemctl start mysql.service</code><br>d.配置开机启动<code>systemctl enable mysql.service</code>，如果不需要开机启动则使用命令<code>systemctl disable mysql.service</code></p>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux下安装mysql(tar源码安装方式)]]></title>
+    <url>%2F2019%2F08%2F06%2Fmysql-linux-tar-install.html</url>
+    <content type="text"><![CDATA[前言本博客记录mysql.5.7.27在linux(CentOS7.6)下的安装步骤 1.版本说明及安装包下载mysql: v5.7.26。这里介绍的是tar源码方式安装，所有需要下载.tar.gz包。点击下载跳转到下载页面linux: CentOS 7.6 64位 2.上传安装包将下载好的安装包上传到服务器的/usr/local/目录下，并通过命令tar -zxvf mysql-5.7.27-linux-glibc2.12-i686.tar.gz解压缩到本目录，将解压后的文件通过mv命令重命名为mysql 3.创建用户组并赋权1234groupadd mysqluseradd -r -g mysql mysqlchown -R mysql mysql/chgrp -R mysql mysql/ 4.编辑配置文件1234567891011121314151617181920212223242526272829303132333435363738vim /etc/my.cnf# 复制粘贴一下内容，部分路径需要修改为自己的路径[mysqld]basedir=/usr/local/mysqldatadir=/usr/local/mysql/dataport=3306# server_id = .....socket=/tmp/mysql.sockcharacter-set-server=utf8log-error=/usr/local/mysql/log/error.logpid-file=/usr/local/mysql/mysqld/mysql.pid# Remove leading # to set options mainly useful for reporting servers.# The server defaults are faster for transactions and fast SELECTs.# Adjust sizes as needed, experiment to find the optimal values.symbolic-links=0lower_case_table_names=1explicit_defaults_for_timestamp=true# join_buffer_size = 128M# sort_buffer_size = 2M# read_rnd_buffer_size = 2Minnodb_buffer_pool_size=2Ginnodb_log_file_size=256Mmax_connections=300innodb_flush_log_at_trx_commit=2default-storage-engine=INNODBcharacter-set-server=utf8collation-server=utf8_general_ci[client]default-character-set=utf8default-time_zone=&apos;+8:00&apos;sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION 5.初始化数据库a.通过命令安装libaio，命令：yum install libaiob.创建日志文件，注意这里的日志文件对应配置中的log-error属性的值c.进入上面创建的日志文件所在目录授权，命令:chmod 777 error.log，chown mysql:mysql error.logd.初始化数据库，注意检查命令中的路径情况。命令：/usr/local/mysql/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --lc_messages_dir=/usr/local/mysql/share --lc_messages=en_US 6.获取初始密码经过上述步骤初始化数据库后，可以通过命令cat /usr/local/mysql/log/error.log查看密码。日志文件中找到root@localhost:这里放的就是初始密码 7.启动服务修改密码123456789101112131415161718192021# 进入mysql根目录cd /usr/local/mysql/# 创建文件夹mkdir mysqld# 授权chmod 644 mysqld# 创建pid文件cd mysqldvim mysql.pid # 不需要写入任何内容直接保存退出# 授权chmod 644 mysql.pidchown mysql:mysql mysql.pid# 启动mysql服务/usr/local/mysql/support-files/mysql.server start# 通过上面提到的密码进入mysql/usr/local/mysql/bin/mysql -uroot -p 上面提到的密码# 进入mysql后，首先要重置密码(必要)set password=password('新密码');UPDATE `mysql`.`user` SET `Host` = '%', `User` = 'root' WHERE (`Host` = 'localhost') AND (`User` = 'root');flush privileges; 到这一步就可以检查是否可以远程连接了 8.开机自启(centos 7.X)a.创建启动文件touch /usr/lib/systemd/system/mysql.serviceb.编辑配置文件：vim /usr/lib/systemd/system/mysql.service将下面的配置信息复制粘贴到文件中，注意修改ExecStart的属性值，改成自己的路径。其他的不用修改 123456789101112131415161718[Unit]Description=MySQL ServerDocumentation=man:mysqld(8)Documentation=http://dev.mysql.com/doc/refman/en/using-systemd.htmlAfter=network.targetAfter=syslog.target[Install]WantedBy=multi-user.target[Service]User=mysqlGroup=mysqlExecStart=/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnfLimitNOFILE = 5000#Restart=on-failure#RestartPreventExitStatus=1#PrivateTmp=false c.通过systemctl启动mysqlsystemctl start mysql.serviced.配置开机启动systemctl enable mysql.service，如果不需要开机启动则使用命令systemctl disable mysql.service]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> mysql </category>
-          
-          <category> 安装 </category>
-          
+        <category>教程</category>
+        <category>mysql</category>
+        <category>安装</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux下jdk的安装与配置</title>
-      <link href="/2019/08/05/jdk-linux-install.html"/>
-      <url>/2019/08/05/jdk-linux-install.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">jdk</span>在linux(<span class="label info">CentOS</span>)下的安装步骤</p><a id="more"></a><h2 id="1-安装包下载"><a href="#1-安装包下载" class="headerlink" title="1.安装包下载"></a>1.安装包下载</h2><p>本文记录的是解压缩安装的方式。<span class="exturl" data-url="aHR0cHM6Ly93d3cub3JhY2xlLmNvbS90ZWNobmV0d29yay9qYXZhL2phdmFzZS9kb3dubG9hZHMvamRrOC1kb3dubG9hZHMtMjEzMzE1MS5odG1s" title="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">下载<i class="fa fa-external-link"></i></span>安装包</p><div class="note info">            <p>注意下载对应环境下的安装包，以<span class="label info">.tar.gz</span>结尾</p>          </div><h2 id="2-解压缩"><a href="#2-解压缩" class="headerlink" title="2.解压缩"></a>2.解压缩</h2><p>解压缩到指定目录，命令：<code>tar -zvxf &lt;jdk-path&gt; -C /usr/local/</code></p><h2 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3.配置环境变量"></a>3.配置环境变量</h2><p>编辑配置文件，命令：<code>vi /etc/profile</code><br>在文件木屋增加如下配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/java/jdk1.8.0_221</span><br><span class="line">JRE_HOME=/usr/java/jdk1.8.0_221/jre</span><br><span class="line">CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br><span class="line">export JAVA_HOME JRE_HOME CLASS_PATH PATH</span><br></pre></td></tr></table></figure><h2 id="4-配置生效"><a href="#4-配置生效" class="headerlink" title="4.配置生效"></a>4.配置生效</h2><p>命令：<code>source /etc/profile</code></p><h2 id="4-验证配置"><a href="#4-验证配置" class="headerlink" title="4.验证配置"></a>4.验证配置</h2><p>命令：<code>java -version</code></p>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux下jdk的安装与配置]]></title>
+    <url>%2F2019%2F08%2F05%2Fjdk-linux-install.html</url>
+    <content type="text"><![CDATA[前言本博客记录jdk在linux(CentOS)下的安装步骤 1.安装包下载本文记录的是解压缩安装的方式。下载安装包 注意下载对应环境下的安装包，以.tar.gz结尾 2.解压缩解压缩到指定目录，命令：tar -zvxf &lt;jdk-path&gt; -C /usr/local/ 3.配置环境变量编辑配置文件，命令：vi /etc/profile在文件木屋增加如下配置 12345JAVA_HOME=/usr/java/jdk1.8.0_221JRE_HOME=/usr/java/jdk1.8.0_221/jreCLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libPATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/binexport JAVA_HOME JRE_HOME CLASS_PATH PATH 4.配置生效命令：source /etc/profile 4.验证配置命令：java -version]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> jdk </category>
-          
-          <category> 安装 </category>
-          
+        <category>教程</category>
+        <category>jdk</category>
+        <category>安装</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> jdk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux centos下nginx的安装与配置</title>
-      <link href="/2019/08/05/nginx-linux-install.html"/>
-      <url>/2019/08/05/nginx-linux-install.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本博客记录<span class="label info">nginx</span>在linux(<span class="label info">CentOS</span>)下的安装步骤</p><a id="more"></a><h2 id="1-版本说明及安装包下载"><a href="#1-版本说明及安装包下载" class="headerlink" title="1.版本说明及安装包下载"></a>1.版本说明及安装包下载</h2><p>nginx: 建议下载最新稳定版<span class="exturl" data-url="aHR0cDovL25naW54Lm9yZy9lbi9kb3dubG9hZC5odG1s" title="http://nginx.org/en/download.html">下载<i class="fa fa-external-link"></i></span></p><p>linux: CentOS 7.6 64位</p><h2 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2.步骤"></a>2.步骤</h2><h3 id="2-1-安装依赖"><a href="#2-1-安装依赖" class="headerlink" title="2.1.安装依赖"></a>2.1.安装依赖</h3><p>通过<code>yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</code>安装依赖</p><h3 id="2-2-解压缩安装包"><a href="#2-2-解压缩安装包" class="headerlink" title="2.2.解压缩安装包"></a>2.2.解压缩安装包</h3><ul><li><p>将下载好的依赖包通过<span class="label info">winSCP</span>这一类的工具上传到服务器的根目录</p></li><li><p>通过<code>tar -xzvf nginx-1.16.0.tar.gz -C /usr/local</code>命令解压缩文件到指定目录</p></li><li><p>cd /usr/local/nginx-1.16.0，执行编译安装前配置，指定安装路径和需要安装的模块(ssl)<code>./configure --prefix=/usr/local/nginx --with-http_ssl_module</code></p></li></ul><h3 id="2-3-编译-amp-安装"><a href="#2-3-编译-amp-安装" class="headerlink" title="2.3.编译&amp;安装"></a>2.3.编译&amp;安装</h3><p>进入到解压后的目录，通过<code>make &amp;&amp; make install</code>命令可以进行编译并且安装</p><p>修改nginx配置，启动nginx即可查看是否安装成功</p><hr><h3 id="2-4-配置"><a href="#2-4-配置" class="headerlink" title="2.4.配置"></a>2.4.配置</h3><h4 id="2-4-1-nginx配置成服务"><a href="#2-4-1-nginx配置成服务" class="headerlink" title="2.4.1.nginx配置成服务"></a>2.4.1.nginx配置成服务</h4><h5 id="centos-6-x下"><a href="#centos-6-x下" class="headerlink" title="centos 6.x下"></a>centos 6.x下</h5><p>a.在/etc/init.d下创建nginx，命令：<code>vim /etc/init.d/nginx</code>，按下<span class="label info">i</span>键进入编辑模式，将<span class="exturl" data-url="aHR0cHM6Ly93d3cubmdpbnguY29tL3Jlc291cmNlcy93aWtpL3N0YXJ0L3RvcGljcy9leGFtcGxlcy9yZWRoYXRuZ2lueGluaXQv" title="https://www.nginx.com/resources/wiki/start/topics/examples/redhatnginxinit/">文档<i class="fa fa-external-link"></i></span>下的配置代码<span class="label info">修改</span>后粘入，按下<span class="label info">ESC</span>后，再按下<span class="label info">:wq</span>保存退出编辑</p><div class="note info">            <p>需要修改的内容</p><p>nginx=”path”修改为nginx的执行文件的路径，如果按照上面的步骤，则路径为/usr/local/nginx/sbin/nginx</p><p>NGINX_CONF_FILE=”path”修改为nginx的配置文件的路径，如果按照上面的配置，则路径为/usr/local/nginx/conf/conf.conf</p>          </div><p>b.给/etc/init.d/nginx文件增加执行权限，命令：<code>chmod a+x /etc/init.d/nginx</code></p><p>c.将nginx服务加入chkconfig管理列表，命令：<code>chkconfig --add /etc/init.d/nginx</code>，至此，就可以通过<code>service nginx &lt;start | stop | restart&gt;</code>管理nginx服务了</p><p>d.设置开机自启，命令：<code>chkconfig nginx on</code></p><h5 id="centos-7-x下"><a href="#centos-7-x下" class="headerlink" title="centos 7.x下"></a>centos 7.x下</h5><p>a.编辑自定义服务脚本，命令：<code>vi /usr/lib/systemd/system/nginx.service</code>，复制粘贴下面的代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line"></span><br><span class="line">Description=nginx service</span><br><span class="line"></span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"></span><br><span class="line">Type=forking</span><br><span class="line"></span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx</span><br><span class="line"></span><br><span class="line">ExecReload=/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line"></span><br><span class="line">ExecStop=/usr/local/nginx/sbin/nginx -s quit</span><br><span class="line"></span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line"></span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure><p>b.文件赋权，命令：<code>chmod +x /usr/lib/systemd/system/nginx.service</code></p><p>c.重启systemctl，命令：<code>systemctl daemon-reload</code></p><p>d.设置开机启动，命令：<code>systemctl enable nginx.service</code></p><p>其他命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">systemctl start nginx.service　         #启动nginx服务</span><br><span class="line"></span><br><span class="line">systemctl stop nginx.service　          #停止服务</span><br><span class="line"></span><br><span class="line">systemctl restart nginx.service　       #重新启动服务</span><br><span class="line"></span><br><span class="line">systemctl list-units --type=service     #查看所有已启动的服务</span><br><span class="line"></span><br><span class="line">systemctl status nginx.service          #查看服务当前状态</span><br><span class="line"></span><br><span class="line">systemctl enable nginx.service          #设置开机自启动</span><br><span class="line"></span><br><span class="line">systemctl disable nginx.service         #停止开机自启动</span><br></pre></td></tr></table></figure><div class="note info">            <p>过程中如果执行命令不成功可以尝试传统方法彻底关闭nginx服务，然后再尝试使用上述命令进行相关操作</p>          </div>]]></content>
-      
-      
+      <tags>
+        <tag>jdk</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux centos下nginx的安装与配置]]></title>
+    <url>%2F2019%2F08%2F05%2Fnginx-linux-install.html</url>
+    <content type="text"><![CDATA[前言本博客记录nginx在linux(CentOS)下的安装步骤 1.版本说明及安装包下载nginx: 建议下载最新稳定版下载 linux: CentOS 7.6 64位 2.步骤2.1.安装依赖通过yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel安装依赖 2.2.解压缩安装包 将下载好的依赖包通过winSCP这一类的工具上传到服务器的根目录 通过tar -xzvf nginx-1.16.0.tar.gz -C /usr/local命令解压缩文件到指定目录 cd /usr/local/nginx-1.16.0，执行编译安装前配置，指定安装路径和需要安装的模块(ssl)./configure --prefix=/usr/local/nginx --with-http_ssl_module 2.3.编译&amp;安装进入到解压后的目录，通过make &amp;&amp; make install命令可以进行编译并且安装 修改nginx配置，启动nginx即可查看是否安装成功 2.4.配置2.4.1.nginx配置成服务centos 6.x下a.在/etc/init.d下创建nginx，命令：vim /etc/init.d/nginx，按下i键进入编辑模式，将文档下的配置代码修改后粘入，按下ESC后，再按下:wq保存退出编辑 需要修改的内容nginx=”path”修改为nginx的执行文件的路径，如果按照上面的步骤，则路径为/usr/local/nginx/sbin/nginxNGINX_CONF_FILE=”path”修改为nginx的配置文件的路径，如果按照上面的配置，则路径为/usr/local/nginx/conf/conf.conf b.给/etc/init.d/nginx文件增加执行权限，命令：chmod a+x /etc/init.d/nginx c.将nginx服务加入chkconfig管理列表，命令：chkconfig --add /etc/init.d/nginx，至此，就可以通过service nginx &lt;start | stop | restart&gt;管理nginx服务了 d.设置开机自启，命令：chkconfig nginx on centos 7.x下a.编辑自定义服务脚本，命令：vi /usr/lib/systemd/system/nginx.service，复制粘贴下面的代码 1234567891011121314151617181920212223242526[Unit]Description=nginx serviceAfter=network.target[Service]Type=forkingExecStart=/usr/local/nginx/sbin/nginxExecReload=/usr/local/nginx/sbin/nginx -s reloadExecStop=/usr/local/nginx/sbin/nginx -s quitPrivateTmp=true[Install]WantedBy=multi-user.target b.文件赋权，命令：chmod +x /usr/lib/systemd/system/nginx.service c.重启systemctl，命令：systemctl daemon-reload d.设置开机启动，命令：systemctl enable nginx.service 其他命令： 1234567891011121314systemctl start nginx.service #启动nginx服务systemctl stop nginx.service #停止服务systemctl restart nginx.service #重新启动服务systemctl list-units --type=service #查看所有已启动的服务systemctl status nginx.service #查看服务当前状态systemctl enable nginx.service #设置开机自启动systemctl disable nginx.service #停止开机自启动 过程中如果执行命令不成功可以尝试传统方法彻底关闭nginx服务，然后再尝试使用上述命令进行相关操作]]></content>
       <categories>
-          
-          <category> 教程 </category>
-          
-          <category> nginx </category>
-          
-          <category> 安装 </category>
-          
+        <category>教程</category>
+        <category>nginx</category>
+        <category>安装</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> nginx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hexo学习</title>
-      <link href="/2019/07/08/hexo-learning.html"/>
-      <url>/2019/07/08/hexo-learning.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里是文章的摘要</p><a id="more"></a><hr><h2 id="1-注意类标签"><a href="#1-注意类标签" class="headerlink" title="1.注意类标签"></a>1.注意类标签</h2><h3 id="1-1-样式一"><a href="#1-1-样式一" class="headerlink" title="1.1.样式一"></a>1.1.样式一</h3><div class="note default">            <p>这里是注释样式<br>这里是注释样式<br>这里是注释样式</p>          </div><h3 id="1-2-样式二"><a href="#1-2-样式二" class="headerlink" title="1.2.样式二"></a>1.2.样式二</h3><div class="note primary">            <p>这里是默认样式<br>这里是注释样式<br>这里是注释样式</p>          </div><h3 id="1-3-样式三"><a href="#1-3-样式三" class="headerlink" title="1.3.样式三"></a>1.3.样式三</h3><div class="note info">            <h4 id="info-Header"><a href="#info-Header" class="headerlink" title="info Header"></a>info Header</h4><p>这里是默认样式<br><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv" title="https://hexo.io">Hexo!<i class="fa fa-external-link"></i></span></p>          </div><h2 id="2-label标签"><a href="#2-label标签" class="headerlink" title="2.label标签"></a>2.label标签</h2><h3 id="1-1-样式一-1"><a href="#1-1-样式一-1" class="headerlink" title="1.1.样式一"></a>1.1.样式一</h3><p>这里是label标签的样式,这里是<span class="label default">注意点</span><span class="label primary">也是注意点</span>,<br>success的注意点:<span class="label success">也是注意点</span><br>info级别的注意点:<span class="label info">也是注意点</span><br>warn级别的注意点：<span class="label warning">也是注意点</span><br><del><span class="label default">错误</span></del> <mark>正确</mark></p><h2 id="3-code美化"><a href="#3-code美化" class="headerlink" title="3.code美化"></a>3.code美化</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp root@ip:/path path</span><br><span class="line">scp root@ip:/path path</span><br><span class="line">scp root@ip:/path path</span><br><span class="line">scp root@ip:/path path</span><br></pre></td></tr></table></figure><h3 id="3-1-压缩部署"><a href="#3-1-压缩部署" class="headerlink" title="3.1.压缩部署"></a>3.1.压缩部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d &amp;&amp; gulp</span><br></pre></td></tr></table></figure><h3 id="3-1-行代码样式"><a href="#3-1-行代码样式" class="headerlink" title="3.1.行代码样式"></a>3.1.行代码样式</h3><p><code>hexo g -d &amp;&amp; gulp</code></p><h2 id="4-其他"><a href="#4-其他" class="headerlink" title="4.其他"></a>4.其他</h2>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo学习]]></title>
+    <url>%2F2019%2F07%2F08%2Fhexo-learning.html</url>
+    <content type="text"><![CDATA[前言这里是文章的摘要 1.注意类标签1.1.样式一 这里是注释样式这里是注释样式这里是注释样式 1.2.样式二 这里是默认样式这里是注释样式这里是注释样式 1.3.样式三 info Header这里是默认样式Welcome to Hexo! 2.label标签1.1.样式一这里是label标签的样式,这里是注意点也是注意点,success的注意点:也是注意点info级别的注意点:也是注意点warn级别的注意点：也是注意点错误 正确 3.code美化1234scp root@ip:/path pathscp root@ip:/path pathscp root@ip:/path pathscp root@ip:/path path 3.1.压缩部署1hexo g -d &amp;&amp; gulp 3.1.行代码样式hexo g -d &amp;&amp; gulp 4.其他]]></content>
       <categories>
-          
-          <category> 学习 </category>
-          
-          <category> hexo </category>
-          
+        <category>学习</category>
+        <category>hexo</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>linux常用命令笔记</title>
-      <link href="/2019/07/08/linux-command.html"/>
-      <url>/2019/07/08/linux-command.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-系统文件相关操作命令"><a href="#1-系统文件相关操作命令" class="headerlink" title="1.系统文件相关操作命令"></a>1.系统文件相关操作命令</h2><h3 id="1-1-文件重命名-文件移动"><a href="#1-1-文件重命名-文件移动" class="headerlink" title="1.1.文件重命名/文件移动"></a>1.1.文件重命名/文件移动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv &lt;源文件&gt; &lt;目标文件&gt;</span><br></pre></td></tr></table></figure><blockquote><p>e.g: mv test.txt text1.txt</p></blockquote><a id="more"></a><h3 id="1-2-文件删除命令"><a href="#1-2-文件删除命令" class="headerlink" title="1.2.文件删除命令"></a>1.2.文件删除命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm &lt;文件&gt;</span><br></pre></td></tr></table></figure><blockquote><p>e.g: rm test.txt</p></blockquote><h3 id="1-3-文件复制命令"><a href="#1-3-文件复制命令" class="headerlink" title="1.3.文件复制命令"></a>1.3.文件复制命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp &lt;源文件&gt; &lt;目标文件&gt;</span><br></pre></td></tr></table></figure><blockquote><p>e.g: cp test.txt test1.txt</p></blockquote><h3 id="1-4-创建文件夹命令"><a href="#1-4-创建文件夹命令" class="headerlink" title="1.4.创建文件夹命令"></a>1.4.创建文件夹命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir &lt;文件夹&gt;</span><br></pre></td></tr></table></figure><blockquote><p>e.g: mkdir test</p></blockquote><h3 id="1-5-按照文件名查找文件命令（模糊查找）"><a href="#1-5-按照文件名查找文件命令（模糊查找）" class="headerlink" title="1.5.按照文件名查找文件命令（模糊查找）"></a>1.5.按照文件名查找文件命令（模糊查找）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find &lt;查询根路径&gt; -name &apos;*关键字*&apos;</span><br></pre></td></tr></table></figure><blockquote><p>e.g: find / -name ‘test’</p></blockquote><h3 id="1-6-文件编辑命令-vi"><a href="#1-6-文件编辑命令-vi" class="headerlink" title="1.6.文件编辑命令-vi"></a>1.6.文件编辑命令-vi</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi &lt;文件&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">1. 按下insert键进入到编辑模式</span><br><span class="line">2. 编辑好后按下ESC，输入*==:wq==*保存修改并退出.输入*==:q!==*忽略修改强制退出</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure><h2 id="2-系统操作相关命令"><a href="#2-系统操作相关命令" class="headerlink" title="2.系统操作相关命令"></a>2.系统操作相关命令</h2><h3 id="2-1查看端口情况"><a href="#2-1查看端口情况" class="headerlink" title="2.1查看端口情况"></a>2.1查看端口情况</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp|grep &lt;端口号&gt;</span><br><span class="line"></span><br><span class="line">// windows下</span><br><span class="line">netstat -ano|findstr &quot;5601&quot;// 查看端口</span><br><span class="line">tasklist|findstr &quot;1832&quot;// 查看那个应用使用该端口</span><br></pre></td></tr></table></figure><h3 id="2-2查看某个服务是否存在进程"><a href="#2-2查看某个服务是否存在进程" class="headerlink" title="2.2查看某个服务是否存在进程"></a>2.2查看某个服务是否存在进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps -ef |grep &lt;服务&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">结果中每列分别代表的意思</span><br><span class="line">==进程用户==/==进程ID==/==父进程ID==/==CPU调度情况==/==进程启动时间==/==启动进程的终端==/==进程公占用CPU==/==进程启动命令==</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure><h3 id="2-3强制杀掉进程"><a href="#2-3强制杀掉进程" class="headerlink" title="2.3强制杀掉进程"></a>2.3强制杀掉进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 &lt;进程ID&gt;</span><br></pre></td></tr></table></figure><h4 id="查看-修改-系统时间"><a href="#查看-修改-系统时间" class="headerlink" title="查看(修改)系统时间"></a>查看(修改)系统时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">date</span><br><span class="line">date -s &apos;新时间&apos;</span><br></pre></td></tr></table></figure><h3 id="2-4-动态日志查看"><a href="#2-4-动态日志查看" class="headerlink" title="2.4.动态日志查看"></a>2.4.动态日志查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tail -f &lt;-n 行数&gt; &lt;文件&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">1. *==-n 40==*代表监控末尾40行日志</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure><h4 id="远程机器通过ssh登录"><a href="#远程机器通过ssh登录" class="headerlink" title="远程机器通过ssh登录"></a>远程机器通过ssh登录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh ip</span><br></pre></td></tr></table></figure><h3 id="2-5-拷贝远程文件到本地-scp"><a href="#2-5-拷贝远程文件到本地-scp" class="headerlink" title="2.5.拷贝远程文件到本地-scp"></a>2.5.拷贝远程文件到本地-scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp root@192.168.1.1:/abc/ddd/text.txt /本地目录</span><br></pre></td></tr></table></figure><h3 id="2-6-拷贝本地文件到远程-scp"><a href="#2-6-拷贝本地文件到远程-scp" class="headerlink" title="2.6.拷贝本地文件到远程-scp"></a>2.6.拷贝本地文件到远程-scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /本地目录 root@192.168.1.1:/abc/ddd/text.txt</span><br></pre></td></tr></table></figure><h3 id="2-7-拷贝远程文件夹到本地-scp"><a href="#2-7-拷贝远程文件夹到本地-scp" class="headerlink" title="2.7.拷贝远程文件夹到本地-scp"></a>2.7.拷贝远程文件夹到本地-scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp *==-r==* root@192.168.1.1:/abc/ddd/text.txt /本地目录</span><br></pre></td></tr></table></figure><h3 id="2-8-拷贝本地文件夹到远程-scp"><a href="#2-8-拷贝本地文件夹到远程-scp" class="headerlink" title="2.8.拷贝本地文件夹到远程-scp"></a>2.8.拷贝本地文件夹到远程-scp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp *==-r==* /本地目录 root@192.168.1.1:/abc/ddd/text.txt</span><br></pre></td></tr></table></figure><h3 id="2-9-通过关键词筛选日志"><a href="#2-9-通过关键词筛选日志" class="headerlink" title="2.9.通过关键词筛选日志"></a>2.9.通过关键词筛选日志</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--得到关键词日志所在行号--&gt;</span><br><span class="line">cat -n 日志文件 |grep &apos;关键词&apos;</span><br><span class="line">&lt;!--查看第100行前后10行的日志--&gt;</span><br><span class="line">cat -n error.log |tail -n +90 |head -n 20</span><br></pre></td></tr></table></figure><h3 id="2-10-给某个文件添加可执行权限"><a href="#2-10-给某个文件添加可执行权限" class="headerlink" title="2.10.给某个文件添加可执行权限"></a>2.10.给某个文件添加可执行权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">chmod +x &lt;文件&gt;</span><br><span class="line">r 读权限 4</span><br><span class="line">w 写权限 2</span><br><span class="line">x 操作权限 1</span><br><span class="line">权限一共10位，第一位代表类型，2-4位代表所有者权限，5-7代表群组权限，8-10代表其他人</span><br><span class="line">举例：</span><br><span class="line">-rwxrwxrwx 777</span><br><span class="line">-rwx-w-r-x 725</span><br></pre></td></tr></table></figure><h3 id="2-11-定时任务"><a href="#2-11-定时任务" class="headerlink" title="2.11.定时任务"></a>2.11.定时任务</h3><p>1.查看定时任务</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure><p>2.编辑定时任务(进入后按照vi命令的格式操作),命令为：* * * * * /脚本路径</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><h3 id="2-12-shell脚本"><a href="#2-12-shell脚本" class="headerlink" title="2.12.shell脚本"></a>2.12.shell脚本</h3><h4 id="语法检查"><a href="#语法检查" class="headerlink" title="语法检查"></a>语法检查</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -n ***.sh</span><br></pre></td></tr></table></figure><h3 id="2-13-运行跟踪"><a href="#2-13-运行跟踪" class="headerlink" title="2.13.运行跟踪"></a>2.13.运行跟踪</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -vx ***.sh</span><br></pre></td></tr></table></figure><h3 id="2-15-centos防火墙"><a href="#2-15-centos防火墙" class="headerlink" title="2.15.centos防火墙"></a>2.15.centos防火墙</h3><p>a.7.X版本</p><h4 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 开放端口</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=9200/tcp</span><br><span class="line">// 查询端口是否开放</span><br><span class="line">firewall-cmd --query-port=9200/tcp</span><br><span class="line">// 重启防火墙</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure><p>b.6.X版本<br>列出所有端口<br>netstat -ntlp</p><div class="note info">            <p>开启端口:方法一</p>          </div>undefined<div class="note info">            <p>开启端口:方法二</p>          </div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables  打开配置文件加入如下语句:</span><br><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT   重启防火墙，修改完成</span><br></pre></td></tr></table></figure><div class="note info">            <p>关闭端口:方法一</p>          </div>undefined<div class="note info">            <p>关闭端口:方法二</p>          </div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables  打开配置文件加入如下语句:</span><br><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j DROP   重启防火墙，修改完成</span><br></pre></td></tr></table></figure><p>查看端口状态<span class="label default">/etc/init.d/iptables status</span></p><p>关闭防火墙,centos的关闭：<span class="label default">service iptables stop</span></p><p>开启ping</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 编辑/etc/sysctl.conf文件</span><br><span class="line">// 新增或修改：</span><br><span class="line">// 关闭</span><br><span class="line">net.ipv4.icmp_echo_ignore_all=1</span><br><span class="line">// 开启</span><br><span class="line">net.ipv4.icmp_echo_ignore_all=0</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux常用命令笔记]]></title>
+    <url>%2F2019%2F07%2F08%2Flinux-command.html</url>
+    <content type="text"><![CDATA[1.系统文件相关操作命令1.1.文件重命名/文件移动1mv &lt;源文件&gt; &lt;目标文件&gt; e.g: mv test.txt text1.txt 1.2.文件删除命令1rm &lt;文件&gt; e.g: rm test.txt 1.3.文件复制命令1cp &lt;源文件&gt; &lt;目标文件&gt; e.g: cp test.txt test1.txt 1.4.创建文件夹命令1mkdir &lt;文件夹&gt; e.g: mkdir test 1.5.按照文件名查找文件命令（模糊查找）1find &lt;查询根路径&gt; -name &apos;*关键字*&apos; e.g: find / -name ‘test’ 1.6.文件编辑命令-vi12345vi &lt;文件&gt;&lt;!--1. 按下insert键进入到编辑模式2. 编辑好后按下ESC，输入*==:wq==*保存修改并退出.输入*==:q!==*忽略修改强制退出--&gt; 2.系统操作相关命令2.1查看端口情况12345netstat -tunlp|grep &lt;端口号&gt;// windows下netstat -ano|findstr &quot;5601&quot;// 查看端口tasklist|findstr &quot;1832&quot;// 查看那个应用使用该端口 2.2查看某个服务是否存在进程12345ps -ef |grep &lt;服务&gt;&lt;!--结果中每列分别代表的意思==进程用户==/==进程ID==/==父进程ID==/==CPU调度情况==/==进程启动时间==/==启动进程的终端==/==进程公占用CPU==/==进程启动命令==--&gt; 2.3强制杀掉进程1kill -9 &lt;进程ID&gt; 查看(修改)系统时间12datedate -s &apos;新时间&apos; 2.4.动态日志查看1234tail -f &lt;-n 行数&gt; &lt;文件&gt;&lt;!--1. *==-n 40==*代表监控末尾40行日志--&gt; 远程机器通过ssh登录1ssh ip 2.5.拷贝远程文件到本地-scp1scp root@192.168.1.1:/abc/ddd/text.txt /本地目录 2.6.拷贝本地文件到远程-scp1scp /本地目录 root@192.168.1.1:/abc/ddd/text.txt 2.7.拷贝远程文件夹到本地-scp1scp *==-r==* root@192.168.1.1:/abc/ddd/text.txt /本地目录 2.8.拷贝本地文件夹到远程-scp1scp *==-r==* /本地目录 root@192.168.1.1:/abc/ddd/text.txt 2.9.通过关键词筛选日志1234&lt;!--得到关键词日志所在行号--&gt;cat -n 日志文件 |grep &apos;关键词&apos;&lt;!--查看第100行前后10行的日志--&gt;cat -n error.log |tail -n +90 |head -n 20 2.10.给某个文件添加可执行权限12345678chmod +x &lt;文件&gt;r 读权限 4w 写权限 2x 操作权限 1权限一共10位，第一位代表类型，2-4位代表所有者权限，5-7代表群组权限，8-10代表其他人举例：-rwxrwxrwx 777-rwx-w-r-x 725 2.11.定时任务1.查看定时任务 1crontab -l 2.编辑定时任务(进入后按照vi命令的格式操作),命令为：* * * * * /脚本路径 1crontab -e 2.12.shell脚本语法检查1sh -n ***.sh 2.13.运行跟踪1sh -vx ***.sh 2.15.centos防火墙a.7.X版本 开放端口123456// 开放端口firewall-cmd --permanent --zone=public --add-port=9200/tcp// 查询端口是否开放firewall-cmd --query-port=9200/tcp// 重启防火墙firewall-cmd --reload b.6.X版本列出所有端口netstat -ntlp 开启端口:方法一 undefined 开启端口:方法二 12vi /etc/sysconfig/iptables 打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT 重启防火墙，修改完成 关闭端口:方法一 undefined 关闭端口:方法二 12vi /etc/sysconfig/iptables 打开配置文件加入如下语句:-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j DROP 重启防火墙，修改完成 查看端口状态/etc/init.d/iptables status 关闭防火墙,centos的关闭：service iptables stop 开启ping 123456// 编辑/etc/sysctl.conf文件// 新增或修改：// 关闭net.ipv4.icmp_echo_ignore_all=1// 开启net.ipv4.icmp_echo_ignore_all=0]]></content>
       <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> 命令 </category>
-          
+        <category>笔记</category>
+        <category>命令</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> linux </tag>
-            
-            <tag> 命令 </tag>
-            
-            <tag> 笔记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>mysql常用命令笔记</title>
-      <link href="/2019/07/08/mysql-command.html"/>
-      <url>/2019/07/08/mysql-command.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录Mysql相关命令及SQL的操作及知识</p><a id="more"></a><h2 id="1-mysql操作命令"><a href="#1-mysql操作命令" class="headerlink" title="1.mysql操作命令"></a>1.mysql操作命令</h2><h3 id="1-1-查看表结构"><a href="#1-1-查看表结构" class="headerlink" title="1.1.查看表结构"></a>1.1.查看表结构</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc table</span><br></pre></td></tr></table></figure><h3 id="1-2-查看所有库"><a href="#1-2-查看所有库" class="headerlink" title="1.2.查看所有库"></a>1.2.查看所有库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span></span><br></pre></td></tr></table></figure><h3 id="1-3-查看库里面所有表"><a href="#1-3-查看库里面所有表" class="headerlink" title="1.3.查看库里面所有表"></a>1.3.查看库里面所有表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span></span><br></pre></td></tr></table></figure><h3 id="1-4-新建库"><a href="#1-4-新建库" class="headerlink" title="1.4.新建库"></a>1.4.新建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">test</span> <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</span><br></pre></td></tr></table></figure><h3 id="1-5-执行sql文件"><a href="#1-5-执行sql文件" class="headerlink" title="1.5.执行sql文件"></a>1.5.执行sql文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /sqlfile.sql</span><br></pre></td></tr></table></figure><h2 id="2-用户授权相关操作"><a href="#2-用户授权相关操作" class="headerlink" title="2.用户授权相关操作"></a>2.用户授权相关操作</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">select</span>,<span class="keyword">insert</span>,<span class="keyword">update</span>,<span class="keyword">delete</span>,<span class="keyword">create</span>,<span class="keyword">drop</span> <span class="keyword">on</span> databsee.* <span class="keyword">to</span> <span class="keyword">user</span>@localhost;</span><br></pre></td></tr></table></figure><p>在后面接上identified by ‘passwd’代表床垫用户密码并授权</p><h2 id="3-锁及事务查看及解释"><a href="#3-锁及事务查看及解释" class="headerlink" title="3.锁及事务查看及解释"></a>3.锁及事务查看及解释</h2><p>查看当前存在的锁信息</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> INFORMATION_SCHEMA.INNODB_LOCKS;</span><br></pre></td></tr></table></figure><p><mark>这里需要补充解释</mark></p><p>查看事务状态信息</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> INFORMATION_SCHEMA.INNODB_TRX;</span><br></pre></td></tr></table></figure><p><mark>这里需要补充解释</mark></p><h2 id="4-导出相关"><a href="#4-导出相关" class="headerlink" title="4.导出相关"></a>4.导出相关</h2><div class="note info">            <p>注意，在linux命令行下输入以下命令</p>          </div><h3 id="4-1-导出数据为SQL"><a href="#4-1-导出数据为SQL" class="headerlink" title="4.1.导出数据为SQL"></a>4.1.导出数据为SQL</h3><p>a.导出所有数据</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u userName -p dabaseName &gt; fileName.sql</span><br></pre></td></tr></table></figure><p>b.导出某个表的数据</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u userName -p  dabaseName tableName &gt; fileName.sql</span><br></pre></td></tr></table></figure><p>c.导出所有表结构</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u userName -p -d dabaseName  &gt; fileName.sql</span><br></pre></td></tr></table></figure><p>d.导出某个表的表结构</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u userName -p -d dabaseName tableName &gt; fileName.sql</span><br></pre></td></tr></table></figure><h2 id="5-特殊SQL"><a href="#5-特殊SQL" class="headerlink" title="5.特殊SQL"></a>5.特殊SQL</h2><h3 id="5-1-新增"><a href="#5-1-新增" class="headerlink" title="5.1.新增"></a>5.1.新增</h3><p>同一个库之间两个具有完全相同字段的不同表之间数据同步可以用一下SQL实现</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into taba selete * from tabb</span><br></pre></td></tr></table></figure><h3 id="5-2-查看连接数"><a href="#5-2-查看连接数" class="headerlink" title="5.2.查看连接数"></a>5.2.查看连接数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">substring_index(HOST, &apos;:&apos;, 1) AS HOST, count(0) count</span><br><span class="line">FROM</span><br><span class="line"> information_schema.PROCESSLIST</span><br><span class="line">GROUP BY</span><br><span class="line"> substring_index(HOST, &apos;:&apos;, 1);</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>linux</tag>
+        <tag>命令</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mysql常用命令笔记]]></title>
+    <url>%2F2019%2F07%2F08%2Fmysql-command.html</url>
+    <content type="text"><![CDATA[前言记录Mysql相关命令及SQL的操作及知识 1.mysql操作命令1.1.查看表结构1desc table 1.2.查看所有库1show databases 1.3.查看库里面所有表1show tables 1.4.新建库1CREATE DATABASE test DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; 1.5.执行sql文件1source /sqlfile.sql 2.用户授权相关操作1grant select,insert,update,delete,create,drop on databsee.* to user@localhost; 在后面接上identified by ‘passwd’代表床垫用户密码并授权 3.锁及事务查看及解释查看当前存在的锁信息 1SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCKS; 这里需要补充解释 查看事务状态信息 1SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX; 这里需要补充解释 4.导出相关 注意，在linux命令行下输入以下命令 4.1.导出数据为SQLa.导出所有数据 1mysqldump -u userName -p dabaseName &gt; fileName.sql b.导出某个表的数据 1mysqldump -u userName -p dabaseName tableName &gt; fileName.sql c.导出所有表结构 1mysqldump -u userName -p -d dabaseName &gt; fileName.sql d.导出某个表的表结构 1mysqldump -u userName -p -d dabaseName tableName &gt; fileName.sql 5.特殊SQL5.1.新增同一个库之间两个具有完全相同字段的不同表之间数据同步可以用一下SQL实现 1insert into taba selete * from tabb 5.2.查看连接数123456SELECTsubstring_index(HOST, &apos;:&apos;, 1) AS HOST, count(0) countFROM information_schema.PROCESSLISTGROUP BY substring_index(HOST, &apos;:&apos;, 1);]]></content>
       <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> 命令 </category>
-          
+        <category>笔记</category>
+        <category>命令</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 命令 </tag>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> mysql </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo admin create first post</title>
-      <link href="/2019/07/08/Hexo-admin-create-first-post-1.html"/>
-      <url>/2019/07/08/Hexo-admin-create-first-post-1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="mysql-相关"><a href="#mysql-相关" class="headerlink" title="mysql 相关"></a>mysql 相关</h1><h3 id="SQL相关"><a href="#SQL相关" class="headerlink" title="SQL相关"></a>SQL相关</h3><ul><li>find_in_set(‘带比较字符串’, ‘字符串集合’)</li></ul><a id="more"></a><h3 id="命令相关"><a href="#命令相关" class="headerlink" title="命令相关"></a>命令相关</h3><ul><li>查看表结构： desc 表名</li><li>用户授权：grant select,insert,update,delete,create,drop on database.* to user@localhost identified by ‘passwd’;</li><li>修改结束符：delimiter //</li><li>调用存储过程：call fun_name()</li></ul><blockquote><p>加上 identified by ‘passwd’ 代表授权同时创建用户密码</p></blockquote><ul><li>刷新授权：flush privileges;</li><li>显示授权：show grants for user@localhost;</li><li>移除用户：revoke delete on <em>.</em> from ‘jack’@’localhost’;</li><li>删除用户及授权：drop user ‘jack’@’localhost’;</li><li>修改用户名：rename user ‘jack’@’%’ to ‘jim’@’%’;</li><li>修改密码：SET authentication_string FOR ‘root’@’localhost’ = authentication_string (‘123456’);</li><li>日志管理：show variables LIKE ‘%general%’;    set global general_log=ON;</li><li>查看所有进程：show full processlist;</li><li>杀死进程：kill id</li></ul><blockquote><p>global general_log=ON 会很耗费性能，平时建议关闭</p></blockquote><ul><li>导出结果集（可解决中文乱码问题）：select * from table into outfile ‘’ CHARACTER SET gbk;<blockquote><p>查看是否有权限-&gt; SHOW VARIABLES LIKE “secure_file_priv”;</p></blockquote></li></ul><h1 id="linux-命令"><a href="#linux-命令" class="headerlink" title="linux 命令"></a>linux 命令</h1><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul><li>文件重命名/文件移动：mv 【源文件】 【新文件】</li><li>文件删除： rm 【文件】</li><li>文件复制： cp 【源文件】 【新文件】</li><li>创建文件夹： mkdir 【文件夹名称】</li><li>模糊查找：find 路径 -name ‘*关键字*‘</li><li>在本目录下查找: find ./ -name ‘关键字’</li><li>编辑文件：vi [文件]<blockquote><p>1.按下insert进入编辑<br>2.按下ESC, :wq 保存退出, :q! 忽略修改强制退出</p></blockquote></li></ul><h3 id="系统操作命令"><a href="#系统操作命令" class="headerlink" title="系统操作命令"></a>系统操作命令</h3><ul><li><p>文件模块查找： find 【根路径】 -name ‘ *关键字* ‘</p></li><li><p>查看系统服务状态： service 【服务名】 status</p></li><li><p>查看进程端口使用情况： netstat - tunlp | grep 8080</p></li><li><p>强制杀掉进程： kill -9 【进程ID】</p></li><li><p>查看系统时间： date</p></li><li><p>修改系统时间： date -s ‘ 新时间 ‘</p></li><li><p>查看动态日志：tail -f 【-n】 【40】 filename 40代表监视末尾40行，前面配合-n使用</p></li><li><p>远程登录： ssh ip</p></li><li><p>文件远程下载： 本机 scp root(登录名)@10.12.13.14（远程IP）:(远程文件路径) (本机下载文件路径)</p></li><li><p>文件远程上传： 本机 scp （本机文件） /test.txt <span class="exturl" data-url="bWFpbHRvOnJvb3RAMTAuMTIuMTMuMTQ=" title="mailto:root@10.12.13.14">root@10.12.13.14<i class="fa fa-external-link"></i></span>:(上传路径)</p></li><li><p>文件夹远程下载： 本机 scp -r root(登录名)@10.12.13.14（远程IP）:(远程文件路径) (本机下载文件路径)本机 scp （本机文件） /test.txt <span class="exturl" data-url="bWFpbHRvOnJvb3RAMTAuMTIuMTMuMTQ=" title="mailto:root@10.12.13.14">root@10.12.13.14<i class="fa fa-external-link"></i></span>:(上传路径)</p></li><li><p>文件夹远程上传： 本机 -r scp （本机文件） /test.txt <span class="exturl" data-url="bWFpbHRvOnJvb3RAMTAuMTIuMTMuMTQ=" title="mailto:root@10.12.13.14">root@10.12.13.14<i class="fa fa-external-link"></i></span>:(上传路径)</p></li><li><p>筛选日志：cat 日志 | grep ‘关键词’</p></li><li><p>查看关键词出现的行号：cat -n 日志 | grep ‘关键词’</p></li><li><p>查看102行的前十行后十行：cat -n error.log |tail -n +92|head -n 20</p></li><li><p>nslookup ums.cmhk.com  解析域名-ip</p></li><li><p>查看某个服务是否存在进程：ps -ef|grep [服务]</p><blockquote><p>每列分别代表的意思：进程用户 进程ID 父进程ID CPU调度情况 进程启动时间 启动进程的终端 进程共占用CPU 进程启动的命令</p></blockquote></li><li><p>某个文件添加可执行权限(x): chmod +x [文件名]</p></li></ul><h1 id="maven相关"><a href="#maven相关" class="headerlink" title="maven相关"></a>maven相关</h1><ul><li>下载卡住：for /r %i in (*.lastUpdated) do del %i</li><li>安装本地jar:mvn install:install-file -DgroupId=org.artofsolving.jodconverter -DartifactId=jodconverter-core -Dversion=3.0-beta-4 -Dpackaging=jar -Dfile=C:\Users\lenovo\Desktop\jodconverter-core-3.0-beta-4.jar</li></ul><h1 id="nginx相关"><a href="#nginx相关" class="headerlink" title="nginx相关"></a>nginx相关</h1><ul><li>查看配置：/usr/local/nginx/sbin/nginx -t</li><li>重启：/usr/local/nginx/sbin/nginx -s reload</li><li>启动：/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</li></ul><h1 id="软件使用心得"><a href="#软件使用心得" class="headerlink" title="软件使用心得"></a>软件使用心得</h1><h3 id="标题快捷键"><a href="#标题快捷键" class="headerlink" title="标题快捷键"></a>标题快捷键</h3><ul><li>一级菜单（#）</li><li>二级菜单（##）</li><li>三级菜单（##）</li><li>…后面以此类推</li></ul><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul><li>‘+‘代表无序列表</li></ul><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote><p>这个是注意的写法</p></blockquote>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>命令</tag>
+        <tag>笔记</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo admin create first post]]></title>
+    <url>%2F2019%2F07%2F08%2FHexo-admin-create-first-post-1.html</url>
+    <content type="text"><![CDATA[mysql 相关SQL相关 find_in_set(‘带比较字符串’, ‘字符串集合’) 命令相关 查看表结构： desc 表名 用户授权：grant select,insert,update,delete,create,drop on database.* to user@localhost identified by ‘passwd’; 修改结束符：delimiter // 调用存储过程：call fun_name() 加上 identified by ‘passwd’ 代表授权同时创建用户密码 刷新授权：flush privileges; 显示授权：show grants for user@localhost; 移除用户：revoke delete on . from ‘jack’@’localhost’; 删除用户及授权：drop user ‘jack’@’localhost’; 修改用户名：rename user ‘jack’@’%’ to ‘jim’@’%’; 修改密码：SET authentication_string FOR ‘root’@’localhost’ = authentication_string (‘123456’); 日志管理：show variables LIKE ‘%general%’; set global general_log=ON; 查看所有进程：show full processlist; 杀死进程：kill id global general_log=ON 会很耗费性能，平时建议关闭 导出结果集（可解决中文乱码问题）：select * from table into outfile ‘’ CHARACTER SET gbk; 查看是否有权限-&gt; SHOW VARIABLES LIKE “secure_file_priv”; linux 命令文件操作 文件重命名/文件移动：mv 【源文件】 【新文件】 文件删除： rm 【文件】 文件复制： cp 【源文件】 【新文件】 创建文件夹： mkdir 【文件夹名称】 模糊查找：find 路径 -name ‘*关键字*‘ 在本目录下查找: find ./ -name ‘关键字’ 编辑文件：vi [文件] 1.按下insert进入编辑2.按下ESC, :wq 保存退出, :q! 忽略修改强制退出 系统操作命令 文件模块查找： find 【根路径】 -name ‘ *关键字* ‘ 查看系统服务状态： service 【服务名】 status 查看进程端口使用情况： netstat - tunlp | grep 8080 强制杀掉进程： kill -9 【进程ID】 查看系统时间： date 修改系统时间： date -s ‘ 新时间 ‘ 查看动态日志：tail -f 【-n】 【40】 filename 40代表监视末尾40行，前面配合-n使用 远程登录： ssh ip 文件远程下载： 本机 scp root(登录名)@10.12.13.14（远程IP）:(远程文件路径) (本机下载文件路径) 文件远程上传： 本机 scp （本机文件） /test.txt root@10.12.13.14:(上传路径) 文件夹远程下载： 本机 scp -r root(登录名)@10.12.13.14（远程IP）:(远程文件路径) (本机下载文件路径)本机 scp （本机文件） /test.txt root@10.12.13.14:(上传路径) 文件夹远程上传： 本机 -r scp （本机文件） /test.txt root@10.12.13.14:(上传路径) 筛选日志：cat 日志 | grep ‘关键词’ 查看关键词出现的行号：cat -n 日志 | grep ‘关键词’ 查看102行的前十行后十行：cat -n error.log |tail -n +92|head -n 20 nslookup ums.cmhk.com 解析域名-ip 查看某个服务是否存在进程：ps -ef|grep [服务] 每列分别代表的意思：进程用户 进程ID 父进程ID CPU调度情况 进程启动时间 启动进程的终端 进程共占用CPU 进程启动的命令 某个文件添加可执行权限(x): chmod +x [文件名] maven相关 下载卡住：for /r %i in (*.lastUpdated) do del %i 安装本地jar:mvn install:install-file -DgroupId=org.artofsolving.jodconverter -DartifactId=jodconverter-core -Dversion=3.0-beta-4 -Dpackaging=jar -Dfile=C:\Users\lenovo\Desktop\jodconverter-core-3.0-beta-4.jar nginx相关 查看配置：/usr/local/nginx/sbin/nginx -t 重启：/usr/local/nginx/sbin/nginx -s reload 启动：/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf 软件使用心得标题快捷键 一级菜单（#） 二级菜单（##） 三级菜单（##） …后面以此类推 无序列表 ‘+‘代表无序列表 注意 这个是注意的写法]]></content>
+  </entry>
 </search>
